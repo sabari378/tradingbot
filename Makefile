@@ -1,14 +1,16 @@
+PYTHON ?= python3
+
 install:
-	python -m pip install -r backend/requirements.txt
+	$(PYTHON) -m pip install -r backend/requirements.txt
 
 test:
-	python -m pytest backend/tests
+	$(PYTHON) -m pytest backend/tests
 
 lint:
-	ruff check backend
+	$(PYTHON) -m ruff check backend
 
 backend:
-	python -m uvicorn nirv.api.main:app --app-dir backend --reload --port 8000
+	$(PYTHON) -m uvicorn nirv.api.main:app --app-dir backend --reload --port 8000
 
 dev: backend
 

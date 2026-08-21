@@ -6,21 +6,33 @@ Nirv is an AI-assisted XAUUSD analysis and trading-orchestration platform. Its g
 
 Nirv starts in `PAPER` mode. The cloud backend never runs MetaTrader 5. A separately authenticated Windows gateway is reserved for future MT5 demo execution. Do not place broker credentials in source, `.env` files committed to Git, mobile shortcuts, or cloud configuration.
 
-## Quick start
+## Quick start on WSL Ubuntu
 
-```powershell
-cd backend
-python -m venv .venv
-.venv\Scripts\activate
-pip install -r requirements.txt
-python -m uvicorn nirv.api.main:app --reload --port 8000
+```bash
+cd /mnt/d/Studies/tradingbot
+sudo apt update
+sudo apt install -y python3 python3-venv python3-pip nodejs npm
+python3 -m venv backend/.venv
+source backend/.venv/bin/activate
+python -m pip install -r backend/requirements.txt
+python -m uvicorn nirv.api.main:app --app-dir backend --reload --port 8000
 ```
 
 Open `http://127.0.0.1:8000/health`, `/api/v1/agents`, or `/docs`. Without a configured market provider, analysis is explicitly marked disconnected and cannot produce an executable signal.
 
+For the dashboard, use a second WSL terminal:
+
+```bash
+cd /mnt/d/Studies/tradingbot/frontend
+npm install
+npm run dev
+```
+
+The Makefile also works from WSL after the Python virtual environment is activated: `make test`, `make lint`, `make backend`, and `make docker-up`.
+
 ## Docker
 
-`docker compose up --build` starts PostgreSQL, Redis, the backend on `8000`, and the frontend on `3000`. MT5 is intentionally excluded because it runs on Windows beside the terminal.
+`docker compose up --build` starts PostgreSQL, Redis, the backend on `8000`, and the frontend on `3000`. From WSL, Docker Desktop integration or a Docker Engine inside Ubuntu must be enabled. MT5 is intentionally excluded because it runs on Windows beside the terminal.
 
 ## Architecture
 
