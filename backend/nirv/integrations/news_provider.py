@@ -1,0 +1,6 @@
+from typing import Protocol
+
+
+class NewsProvider(Protocol):
+    async def events(self, symbol: str) -> list[dict]: ...
+    async def sentiment(self, symbol: str) -> dict: ...

@@ -1,0 +1,15 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata: { name: nirv-backend }
+spec:
+  replicas: {{ .Values.backend.replicas }}
+  selector: { matchLabels: { app: nirv-backend } }
+  template:
+    metadata: { labels: { app: nirv-backend } }
+    spec:
+      serviceAccountName: nirv
+      containers:
+        - name: backend
+          image: "{{ .Values.image.backend }}:{{ .Values.tag }}"
+          ports: [{ containerPort: 8000 }]
+          envFrom: [{ configMapRef: { name: nirv-config } }]

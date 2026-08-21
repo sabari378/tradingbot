@@ -1,0 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+:root { --ink: #091116; --panel: #111d23; --line: #263a40; --muted: #8ba1a2; --mint: #80e4c2; --amber: #f2b866; }
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--ink); color: #edf7f2; font-family: 'Space Grotesk', sans-serif; }
+code, .mono { font-family: 'DM Mono', monospace; }

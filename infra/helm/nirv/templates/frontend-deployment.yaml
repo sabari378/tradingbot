@@ -1,0 +1,13 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata: { name: nirv-frontend }
+spec:
+  replicas: {{ .Values.frontend.replicas }}
+  selector: { matchLabels: { app: nirv-frontend } }
+  template:
+    metadata: { labels: { app: nirv-frontend } }
+    spec:
+      containers:
+        - name: frontend
+          image: "{{ .Values.image.frontend }}:{{ .Values.tag }}"
+          ports: [{ containerPort: 3000 }]

@@ -1,0 +1,15 @@
+image:
+  backend: nirv-backend
+  frontend: nirv-frontend
+tag: latest
+backend:
+  replicas: 2
+frontend:
+  replicas: 2
+service:
+  backendPort: 8000
+  frontendPort: 3000
+ingress:
+  enabled: false
+  host: nirv.example.com
+# Secrets are intentionally omitted; load them from AWS Secrets Manager via CSI/IRSA.

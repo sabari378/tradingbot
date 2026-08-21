@@ -1,0 +1,11 @@
+.env
+.venv/
+__pycache__/
+.pytest_cache/
+.ruff_cache/
+*.py[cod]
+.next/
+node_modules/
+*.db
+terraform/.terraform/
+terraform.tfstate*
