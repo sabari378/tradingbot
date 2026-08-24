@@ -1,4 +1,5 @@
 from nirv.market.candles import Candle
+from nirv.strategies.confluence import evaluate_confluence
 from nirv.strategies.liquidity_sweep import equal_highs, equal_lows, liquidity_sweep
 
 
@@ -8,3 +9,15 @@ def test_equal_levels_and_sweeps() -> None:
     assert equal_lows(candles)
     assert liquidity_sweep([Candle(9, 11, 8, 9)], "buy_side", 10)
     assert liquidity_sweep([Candle(9, 10, 7, 9)], "sell_side", 8)
+
+
+def test_confluence_requires_volume_confirmation() -> None:
+    decision = evaluate_confluence(
+        sweep="sell_side",
+        mss="bullish",
+        fvg="bullish",
+        volume_confirmed=False,
+        news_blocked=False,
+    )
+    assert decision.direction is None
+    assert decision.score == 0

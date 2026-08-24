@@ -37,7 +37,12 @@ async def history() -> list:
 
 @app.get("/symbol/{symbol}")
 async def symbol(symbol: str) -> dict:
-    return {"symbol": symbol, "available": executor.client.available()}
+    return executor.client.symbol_details(symbol)
+
+
+@app.get("/candles/{symbol}/{timeframe}")
+async def candles(symbol: str, timeframe: str, limit: int = 200) -> list[dict]:
+    return executor.client.candles(symbol, timeframe, limit)
 
 
 @app.post("/orders")

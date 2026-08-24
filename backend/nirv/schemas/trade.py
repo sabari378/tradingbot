@@ -22,4 +22,5 @@ class TradeCandidate(BaseModel):
     requested_at: datetime | None = None
     approved_at: datetime | None = None
     executed_at: datetime | None = None
+    broker_ticket: str | None = None
     pnl: float | None = None

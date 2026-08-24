@@ -21,6 +21,9 @@ class Settings(BaseSettings):
     max_spread: float = Field(default=0.5, ge=0)
     max_signal_age_seconds: int = Field(default=300, ge=1)
     log_level: str = "INFO"
+    mt5_gateway_url: str = "http://127.0.0.1:8100"
+    mt5_gateway_secret: str = ""
+    voice_trading_enabled: bool = False
 
     model_config = SettingsConfigDict(env_file=".env", env_file_encoding="utf-8", extra="ignore")
 

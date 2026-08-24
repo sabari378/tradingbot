@@ -2,12 +2,19 @@ from uuid import UUID
 
 from fastapi import APIRouter, Depends, HTTPException
 
-from nirv.core.security import require_api_key
+from nirv.core.enums import ExecutionMode
+from nirv.core.security import require_api_key, require_running
+from nirv.execution.demo import DemoExecutionEngine
 from nirv.execution.paper import PaperExecutionEngine
 from nirv.schemas.trade import TradeCandidate
 from nirv.services.trading_service import trading_service
 
 router = APIRouter(tags=["trades"])
+
+
+@router.post("/trades", dependencies=[Depends(require_api_key)])
+async def create_trade(trade: TradeCandidate) -> TradeCandidate:
+    return trading_service.create(trade)
 
 
 @router.get("/trades")
@@ -41,13 +48,14 @@ async def reject_trade(trade_id: UUID) -> TradeCandidate:
         raise HTTPException(404, "trade not found")
 
 
-@router.post("/trades/{trade_id}/execute", dependencies=[Depends(require_api_key)])
+@router.post("/trades/{trade_id}/execute", dependencies=[Depends(require_running)])
 async def execute_trade(trade_id: UUID) -> TradeCandidate:
     trade = trading_service.get(trade_id)
     if not trade:
         raise HTTPException(404, "trade not found")
     try:
-        executed = await PaperExecutionEngine().execute(trade)
+        engine = DemoExecutionEngine() if trade.mode == ExecutionMode.DEMO else PaperExecutionEngine()
+        executed = await engine.execute(trade)
     except ValueError as error:
         raise HTTPException(409, str(error))
     trading_service.trades[trade_id] = executed

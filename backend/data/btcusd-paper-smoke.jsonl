@@ -1,0 +1,4 @@
+{"event":"SESSION_STARTED","started_at":"2026-08-23T15:11:19.270232+00:00","symbol":"BTCUSD#","mode":"PAPER"}
+{"event":"SCAN","timestamp":"2026-08-23T15:11:19.485231+00:00","symbol":"BTCUSD#","bid":77266.15,"ask":77281.15,"candle_count":200,"direction":null,"score":0,"confluences":[],"volume_confirmed":false,"entry":null,"stop_loss":null,"take_profit":null,"position_open":false}
+{"event":"SCAN","timestamp":"2026-08-23T15:11:24.525570+00:00","symbol":"BTCUSD#","bid":77288.05,"ask":77303.05,"candle_count":200,"direction":null,"score":0,"confluences":[],"volume_confirmed":false,"entry":null,"stop_loss":null,"take_profit":null,"position_open":false}
+{"event":"SESSION_FINISHED","timestamp":"2026-08-23T15:11:29.491253+00:00","position_open":false}
