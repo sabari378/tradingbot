@@ -1,0 +1,18 @@
+﻿{
+    "InitialPositions":  0,
+    "EndAt":  "2026-09-18T17:00:00-04:00",
+    "Variant":  "pluto4",
+    "Changes":  [
+                    "Sweep directional outer-third close",
+                    "Engulfing at prior 20-bar extreme"
+                ],
+    "InitialEquity":  9686.49,
+    "Name":  "Pluto 4",
+    "Baseline":  "Pluto 3",
+    "Tests":  "102 passed",
+    "Timeframes":  [
+                       "M15",
+                       "M30",
+                       "H1"
+                   ]
+}

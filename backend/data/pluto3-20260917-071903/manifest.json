@@ -1,0 +1,14 @@
+﻿{
+    "InitialPositions":  0,
+    "Variant":  "pluto3",
+    "Timeframes":  [
+                       "M15",
+                       "M30",
+                       "H1"
+                   ],
+    "Name":  "Pluto 3",
+    "EndAt":  "2026-09-17T17:00:00-04:00",
+    "InitialEquity":  9928.9,
+    "Change":  "Market Structure fresh crossing only",
+    "Tests":  "81 passed"
+}

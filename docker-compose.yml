@@ -14,13 +14,28 @@ services:
     build: ./backend
     environment:
       DATABASE_URL: postgresql+psycopg://nirv:nirv@postgres:5432/nirv
+      APP_ENV: development
+      NIRV_MODE: ${NIRV_MODE:-PAPER}
+      API_KEY: ${API_KEY:?Set API_KEY in the environment or .env file}
       REDIS_URL: redis://redis:6379/0
-      NIRV_MODE: PAPER
+      DATA_DIR: /var/lib/nirv
+      MT5_GATEWAY_URL: ${DOCKER_MT5_GATEWAY_URL:-http://host.docker.internal:8100}
+      MT5_GATEWAY_SECRET: ${MT5_GATEWAY_SECRET:-}
+      DEMO_TRADING_ENABLED: ${DEMO_TRADING_ENABLED:-false}
+      CORS_ORIGINS: ${CORS_ORIGINS:-http://127.0.0.1:3000,http://localhost:3000}
     ports: ["8000:8000"]
     depends_on: [postgres, redis]
+    volumes: ["nirv_data:/var/lib/nirv"]
+    extra_hosts: ["host.docker.internal:host-gateway"]
+    restart: unless-stopped
   frontend:
-    build: ./frontend
+    build:
+      context: ./frontend
+      args:
+        NEXT_PUBLIC_API_URL: ${NEXT_PUBLIC_API_URL:-http://127.0.0.1:8000}
     ports: ["3000:3000"]
     depends_on: [backend]
+    restart: unless-stopped
 volumes:
   postgres_data:
+  nirv_data:

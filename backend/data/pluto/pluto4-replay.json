@@ -1,0 +1,455 @@
+[
+  {
+    "ticket": 1028026466,
+    "strategy": "sma_crossover",
+    "original_direction": "BUY",
+    "pluto4_direction": "BUY",
+    "labels": [
+      "sma_crossover",
+      "volume_confirmation"
+    ],
+    "original_pnl": -19.6
+  },
+  {
+    "ticket": 1027931024,
+    "strategy": "donchian_breakout",
+    "original_direction": "BUY",
+    "pluto4_direction": "BUY",
+    "labels": [
+      "donchian_breakout",
+      "volume_confirmation"
+    ],
+    "original_pnl": 28.56
+  },
+  {
+    "ticket": 1027931048,
+    "strategy": "donchian_breakout",
+    "original_direction": "BUY",
+    "pluto4_direction": "BUY",
+    "labels": [
+      "donchian_breakout"
+    ],
+    "original_pnl": 41.83
+  },
+  {
+    "ticket": 1027968760,
+    "strategy": "donchian_breakout",
+    "original_direction": "BUY",
+    "pluto4_direction": "BUY",
+    "labels": [
+      "donchian_breakout",
+      "volume_confirmation"
+    ],
+    "original_pnl": -14.91
+  },
+  {
+    "ticket": 1028026453,
+    "strategy": "donchian_breakout",
+    "original_direction": "BUY",
+    "pluto4_direction": "BUY",
+    "labels": [
+      "donchian_breakout",
+      "volume_confirmation"
+    ],
+    "original_pnl": -12.93
+  },
+  {
+    "ticket": 1028026476,
+    "strategy": "donchian_breakout",
+    "original_direction": "BUY",
+    "pluto4_direction": "BUY",
+    "labels": [
+      "donchian_breakout",
+      "volume_confirmation"
+    ],
+    "original_pnl": -19.6
+  },
+  {
+    "ticket": 1028589733,
+    "strategy": "donchian_breakout",
+    "original_direction": "SELL",
+    "pluto4_direction": "SELL",
+    "labels": [
+      "donchian_breakout"
+    ],
+    "original_pnl": -20.64
+  },
+  {
+    "ticket": 1028618580,
+    "strategy": "donchian_breakout",
+    "original_direction": "SELL",
+    "pluto4_direction": "SELL",
+    "labels": [
+      "donchian_breakout"
+    ],
+    "original_pnl": -17.76
+  },
+  {
+    "ticket": 1028624358,
+    "strategy": "donchian_breakout",
+    "original_direction": "SELL",
+    "pluto4_direction": "SELL",
+    "labels": [
+      "donchian_breakout"
+    ],
+    "original_pnl": -24.72
+  },
+  {
+    "ticket": 1027931027,
+    "strategy": "bollinger_reversion",
+    "original_direction": "SELL",
+    "pluto4_direction": "SELL",
+    "labels": [
+      "bollinger_reversion",
+      "volume_confirmation"
+    ],
+    "original_pnl": -14.9
+  },
+  {
+    "ticket": 1027931054,
+    "strategy": "bollinger_reversion",
+    "original_direction": "SELL",
+    "pluto4_direction": "SELL",
+    "labels": [
+      "bollinger_reversion"
+    ],
+    "original_pnl": -21.7
+  },
+  {
+    "ticket": 1028556044,
+    "strategy": "bollinger_reversion",
+    "original_direction": "BUY",
+    "pluto4_direction": "BUY",
+    "labels": [
+      "bollinger_reversion"
+    ],
+    "original_pnl": -20.48
+  },
+  {
+    "ticket": 1028589734,
+    "strategy": "bollinger_reversion",
+    "original_direction": "BUY",
+    "pluto4_direction": "BUY",
+    "labels": [
+      "bollinger_reversion"
+    ],
+    "original_pnl": 38.8
+  },
+  {
+    "ticket": 1028061616,
+    "strategy": "rsi_countertrend",
+    "original_direction": "SELL",
+    "pluto4_direction": "SELL",
+    "labels": [
+      "rsi_countertrend",
+      "volume_confirmation"
+    ],
+    "original_pnl": -19.54
+  },
+  {
+    "ticket": 1028192088,
+    "strategy": "rsi_countertrend",
+    "original_direction": "SELL",
+    "pluto4_direction": "SELL",
+    "labels": [
+      "rsi_countertrend",
+      "volume_confirmation"
+    ],
+    "original_pnl": -24.34
+  },
+  {
+    "ticket": 1028618600,
+    "strategy": "rsi_countertrend",
+    "original_direction": "BUY",
+    "pluto4_direction": "BUY",
+    "labels": [
+      "rsi_countertrend"
+    ],
+    "original_pnl": 33.5
+  },
+  {
+    "ticket": 1027931033,
+    "strategy": "volatility_breakout",
+    "original_direction": "BUY",
+    "pluto4_direction": "BUY",
+    "labels": [
+      "volatility_breakout",
+      "volume_confirmation"
+    ],
+    "original_pnl": 28.64
+  },
+  {
+    "ticket": 1027931056,
+    "strategy": "volatility_breakout",
+    "original_direction": "BUY",
+    "pluto4_direction": "BUY",
+    "labels": [
+      "volatility_breakout"
+    ],
+    "original_pnl": 41.89
+  },
+  {
+    "ticket": 1028026460,
+    "strategy": "volatility_breakout",
+    "original_direction": "BUY",
+    "pluto4_direction": "BUY",
+    "labels": [
+      "volatility_breakout",
+      "volume_confirmation"
+    ],
+    "original_pnl": -12.89
+  },
+  {
+    "ticket": 1028026477,
+    "strategy": "volatility_breakout",
+    "original_direction": "BUY",
+    "pluto4_direction": "BUY",
+    "labels": [
+      "volatility_breakout",
+      "volume_confirmation"
+    ],
+    "original_pnl": -19.41
+  },
+  {
+    "ticket": 1028589740,
+    "strategy": "volatility_breakout",
+    "original_direction": "SELL",
+    "pluto4_direction": "SELL",
+    "labels": [
+      "volatility_breakout"
+    ],
+    "original_pnl": -20.68
+  },
+  {
+    "ticket": 1027931037,
+    "strategy": "engulfing_reversal",
+    "original_direction": "BUY",
+    "pluto4_direction": null,
+    "labels": [
+      "filtered:engulfing_at_20_bar_extreme"
+    ],
+    "original_pnl": 28.55
+  },
+  {
+    "ticket": 1028192091,
+    "strategy": "engulfing_reversal",
+    "original_direction": "SELL",
+    "pluto4_direction": null,
+    "labels": [
+      "filtered:engulfing_at_20_bar_extreme"
+    ],
+    "original_pnl": -24.28
+  },
+  {
+    "ticket": 1028290596,
+    "strategy": "engulfing_reversal",
+    "original_direction": "SELL",
+    "pluto4_direction": null,
+    "labels": [
+      "filtered:engulfing_at_20_bar_extreme"
+    ],
+    "original_pnl": -24.43
+  },
+  {
+    "ticket": 1028611976,
+    "strategy": "engulfing_reversal",
+    "original_direction": "SELL",
+    "pluto4_direction": null,
+    "labels": [
+      "filtered:engulfing_at_20_bar_extreme"
+    ],
+    "original_pnl": -17.4
+  },
+  {
+    "ticket": 1028618605,
+    "strategy": "engulfing_reversal",
+    "original_direction": "SELL",
+    "pluto4_direction": null,
+    "labels": [
+      "filtered:engulfing_at_20_bar_extreme"
+    ],
+    "original_pnl": -16.84
+  },
+  {
+    "ticket": 1027931041,
+    "strategy": "market_structure",
+    "original_direction": "BUY",
+    "pluto4_direction": "BUY",
+    "labels": [
+      "market_structure",
+      "volume_confirmation"
+    ],
+    "original_pnl": 28.12
+  },
+  {
+    "ticket": 1027931060,
+    "strategy": "market_structure",
+    "original_direction": "BUY",
+    "pluto4_direction": "BUY",
+    "labels": [
+      "market_structure"
+    ],
+    "original_pnl": 41.75
+  },
+  {
+    "ticket": 1028338662,
+    "strategy": "market_structure",
+    "original_direction": "SELL",
+    "pluto4_direction": "SELL",
+    "labels": [
+      "market_structure",
+      "volume_confirmation"
+    ],
+    "original_pnl": -23.93
+  },
+  {
+    "ticket": 1028536962,
+    "strategy": "market_structure",
+    "original_direction": "SELL",
+    "pluto4_direction": "SELL",
+    "labels": [
+      "market_structure"
+    ],
+    "original_pnl": -24.22
+  },
+  {
+    "ticket": 1028589778,
+    "strategy": "market_structure",
+    "original_direction": "SELL",
+    "pluto4_direction": "SELL",
+    "labels": [
+      "market_structure"
+    ],
+    "original_pnl": -21.4
+  },
+  {
+    "ticket": 1028589824,
+    "strategy": "market_structure",
+    "original_direction": "SELL",
+    "pluto4_direction": "SELL",
+    "labels": [
+      "market_structure"
+    ],
+    "original_pnl": -19.89
+  },
+  {
+    "ticket": 1027867294,
+    "strategy": "liquidity_sweep",
+    "original_direction": "SELL",
+    "pluto4_direction": null,
+    "labels": [
+      "filtered:directional_close_outer_third"
+    ],
+    "original_pnl": -24.62
+  },
+  {
+    "ticket": 1027883498,
+    "strategy": "liquidity_sweep",
+    "original_direction": "SELL",
+    "pluto4_direction": null,
+    "labels": [
+      "filtered:directional_close_outer_third"
+    ],
+    "original_pnl": -13.05
+  },
+  {
+    "ticket": 1028556045,
+    "strategy": "liquidity_sweep",
+    "original_direction": "BUY",
+    "pluto4_direction": null,
+    "labels": [
+      "filtered:directional_close_outer_third"
+    ],
+    "original_pnl": -21.3
+  },
+  {
+    "ticket": 1028596912,
+    "strategy": "liquidity_sweep",
+    "original_direction": "BUY",
+    "pluto4_direction": null,
+    "labels": [
+      "filtered:directional_close_outer_third"
+    ],
+    "original_pnl": -16.85
+  },
+  {
+    "ticket": 1028611977,
+    "strategy": "liquidity_sweep",
+    "original_direction": "BUY",
+    "pluto4_direction": null,
+    "labels": [
+      "filtered:directional_close_outer_third"
+    ],
+    "original_pnl": -10.4
+  },
+  {
+    "ticket": 1027883495,
+    "strategy": "fair_value_gap",
+    "original_direction": "BUY",
+    "pluto4_direction": "BUY",
+    "labels": [
+      "bullish_fvg"
+    ],
+    "original_pnl": 49.39
+  },
+  {
+    "ticket": 1028385517,
+    "strategy": "fair_value_gap",
+    "original_direction": "SELL",
+    "pluto4_direction": "SELL",
+    "labels": [
+      "bearish_fvg"
+    ],
+    "original_pnl": -22.45
+  },
+  {
+    "ticket": 1028470082,
+    "strategy": "fair_value_gap",
+    "original_direction": "SELL",
+    "pluto4_direction": "SELL",
+    "labels": [
+      "bearish_fvg"
+    ],
+    "original_pnl": 47.84
+  },
+  {
+    "ticket": 1028556047,
+    "strategy": "fair_value_gap",
+    "original_direction": "SELL",
+    "pluto4_direction": "SELL",
+    "labels": [
+      "bearish_fvg"
+    ],
+    "original_pnl": -21.7
+  },
+  {
+    "ticket": 1028564090,
+    "strategy": "fair_value_gap",
+    "original_direction": "SELL",
+    "pluto4_direction": "SELL",
+    "labels": [
+      "bearish_fvg"
+    ],
+    "original_pnl": -21.03
+  },
+  {
+    "ticket": 1028564094,
+    "strategy": "fair_value_gap",
+    "original_direction": "SELL",
+    "pluto4_direction": "SELL",
+    "labels": [
+      "bearish_fvg"
+    ],
+    "original_pnl": -22.0
+  },
+  {
+    "ticket": 1028596917,
+    "strategy": "fair_value_gap",
+    "original_direction": "SELL",
+    "pluto4_direction": "SELL",
+    "labels": [
+      "bearish_fvg"
+    ],
+    "original_pnl": -21.39
+  }
+]

@@ -3,6 +3,7 @@
 import Link from 'next/link';
 import { Activity, ArrowLeft, CircleAlert, Clock3, FileClock, Radio, Target } from 'lucide-react';
 import { useEffect, useState } from 'react';
+import { PageDropdown } from '../page-dropdown';
 
 type HistoryEvent = {
   event: string;
@@ -24,7 +25,7 @@ type HistoryEvent = {
   position_open?: boolean;
 };
 
-const apiUrl = process.env.NEXT_PUBLIC_API_URL ?? 'http://127.0.0.1:8000';
+const apiUrl = process.env.NEXT_PUBLIC_API_URL ?? (process.env.NODE_ENV === 'development' ? 'http://127.0.0.1:8000' : '');
 
 export default function HistoryPage() {
   const [events, setEvents] = useState<HistoryEvent[]>([]);
@@ -46,8 +47,8 @@ export default function HistoryPage() {
   const pnl = closed.reduce((total, event) => total + (event.pnl_points ?? 0), 0);
   const session = events.find((event) => event.event === 'SESSION_STARTED');
 
-  return <main className="min-h-screen bg-[radial-gradient(circle_at_80%_0%,#173a3a_0%,transparent_38%),#091116]">
-    <nav className="flex items-center justify-between border-b border-[var(--line)] px-6 py-5 lg:px-12"><Link href="/" className="flex items-center gap-3"><div className="grid h-9 w-9 place-items-center rounded-lg bg-[var(--mint)] text-[var(--ink)]"><Radio size={20} /></div><span className="text-xl font-semibold tracking-tight">NIRV</span></Link><span className="rounded-full border border-amber-300/30 px-3 py-1.5 text-xs text-[var(--amber)]">PAPER HISTORY</span></nav>
+  return <main className="history-page">
+    <nav className="flex items-center justify-between gap-3 border-b border-[var(--line)] px-6 py-5 lg:px-12"><Link href="/" className="flex items-center gap-3"><div className="grid h-9 w-9 place-items-center rounded-lg bg-[var(--mint)] text-[var(--ink)]"><Radio size={20} /></div><span className="text-xl font-semibold tracking-tight">NIRV</span></Link><div className="flex items-center gap-3"><PageDropdown /><span className="hidden rounded-full border border-amber-300/30 px-3 py-1.5 text-xs text-[var(--amber)] sm:inline-flex">PAPER HISTORY</span></div></nav>
     <div className="mx-auto max-w-7xl px-6 py-8 lg:px-12"><header className="mb-8 flex flex-col justify-between gap-5 md:flex-row md:items-end"><div><Link href="/" className="mono mb-4 flex items-center gap-2 text-xs text-[var(--muted)] hover:text-[var(--mint)]"><ArrowLeft size={14} /> DASHBOARD</Link><p className="mono mb-3 text-xs uppercase tracking-[.25em] text-[var(--mint)]">Experiment log / BTCUSD#</p><h1 className="text-4xl font-semibold tracking-tight md:text-5xl">Paper trading history</h1><p className="mt-3 max-w-2xl text-sm text-[var(--muted)]">Live MT5 market data, deterministic strategy scans, and simulated outcomes. No broker orders are sent from this session.</p></div><div className="mono flex items-center gap-2 text-xs text-[var(--muted)]"><Clock3 size={15} /> AUTO-REFRESH 15S</div></header>
       {error && <div className="mb-4 flex items-center gap-2 border border-red-300/30 bg-red-300/5 p-4 text-sm text-red-200"><CircleAlert size={17} /> History API unavailable</div>}
       <section className="grid gap-4 md:grid-cols-4"><Metric icon={<FileClock size={17} />} label="SCANS" value={String(scans.length)} note={session?.started_at ? `Started ${formatTime(session.started_at)}` : 'Waiting for session'} /><Metric icon={<Target size={17} />} label="PAPER ENTRIES" value={String(opened.length)} note="Simulated fills" /><Metric icon={<Radio size={17} />} label="CLOSED TRADES" value={String(closed.length)} note="Strategy exits" /><Metric icon={<ActivityIcon />} label="P&L POINTS" value={pnl.toFixed(2)} note="Paper result" /></section>

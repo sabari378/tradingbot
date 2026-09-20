@@ -1,0 +1,152 @@
+[
+  {
+    "ticket": 1027931037,
+    "strategy": "engulfing_reversal",
+    "direction": "BUY",
+    "tf": "M15",
+    "pnl": 28.55,
+    "confirmation": true,
+    "extreme": false,
+    "bar": {
+      "open": 4324.7,
+      "high": 4352.97,
+      "low": 4324.37,
+      "close": 4349.78
+    }
+  },
+  {
+    "ticket": 1028192091,
+    "strategy": "engulfing_reversal",
+    "direction": "SELL",
+    "tf": "M15",
+    "pnl": -24.28,
+    "confirmation": true,
+    "extreme": false,
+    "bar": {
+      "open": 4366.98,
+      "high": 4374.05,
+      "low": 4356.17,
+      "close": 4358.32
+    }
+  },
+  {
+    "ticket": 1028290596,
+    "strategy": "engulfing_reversal",
+    "direction": "SELL",
+    "tf": "M15",
+    "pnl": -24.43,
+    "confirmation": true,
+    "extreme": false,
+    "bar": {
+      "open": 4371.74,
+      "high": 4372.83,
+      "low": 4365.56,
+      "close": 4366.74
+    }
+  },
+  {
+    "ticket": 1028611976,
+    "strategy": "engulfing_reversal",
+    "direction": "SELL",
+    "tf": "M15",
+    "pnl": -17.4,
+    "confirmation": true,
+    "extreme": false,
+    "bar": {
+      "open": 4346.21,
+      "high": 4346.82,
+      "low": 4342.48,
+      "close": 4343.1
+    }
+  },
+  {
+    "ticket": 1028618605,
+    "strategy": "engulfing_reversal",
+    "direction": "SELL",
+    "tf": "M30",
+    "pnl": -16.84,
+    "confirmation": true,
+    "extreme": false,
+    "bar": {
+      "open": 4346.21,
+      "high": 4346.82,
+      "low": 4342.11,
+      "close": 4342.17
+    }
+  },
+  {
+    "ticket": 1027867294,
+    "strategy": "liquidity_sweep",
+    "direction": "SELL",
+    "tf": "M15",
+    "pnl": -24.62,
+    "confirmation": false,
+    "extreme": true,
+    "bar": {
+      "open": 4324.2,
+      "high": 4340.03,
+      "low": 4323.74,
+      "close": 4331.96
+    }
+  },
+  {
+    "ticket": 1027883498,
+    "strategy": "liquidity_sweep",
+    "direction": "SELL",
+    "tf": "M30",
+    "pnl": -13.05,
+    "confirmation": false,
+    "extreme": true,
+    "bar": {
+      "open": 4324.2,
+      "high": 4340.03,
+      "low": 4323.74,
+      "close": 4328.38
+    }
+  },
+  {
+    "ticket": 1028556045,
+    "strategy": "liquidity_sweep",
+    "direction": "BUY",
+    "tf": "M15",
+    "pnl": -21.3,
+    "confirmation": false,
+    "extreme": true,
+    "bar": {
+      "open": 4356.34,
+      "high": 4356.42,
+      "low": 4348.36,
+      "close": 4352.11
+    }
+  },
+  {
+    "ticket": 1028596912,
+    "strategy": "liquidity_sweep",
+    "direction": "BUY",
+    "tf": "M15",
+    "pnl": -16.85,
+    "confirmation": false,
+    "extreme": true,
+    "bar": {
+      "open": 4343.31,
+      "high": 4346.79,
+      "low": 4342.69,
+      "close": 4345.19
+    }
+  },
+  {
+    "ticket": 1028611977,
+    "strategy": "liquidity_sweep",
+    "direction": "BUY",
+    "tf": "M15",
+    "pnl": -10.4,
+    "confirmation": false,
+    "extreme": true,
+    "bar": {
+      "open": 4346.21,
+      "high": 4346.82,
+      "low": 4342.48,
+      "close": 4343.1
+    }
+  }
+]

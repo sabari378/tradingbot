@@ -24,6 +24,15 @@ class Settings(BaseSettings):
     mt5_gateway_url: str = "http://127.0.0.1:8100"
     mt5_gateway_secret: str = ""
     voice_trading_enabled: bool = False
+    demo_trading_enabled: bool = False
+    cors_origins: str = "http://127.0.0.1:3000,http://localhost:3000"
+    data_dir: str = "backend/data"
+    paper_session_duration_seconds: int = Field(default=3600, ge=60)
+    demo_session_duration_seconds: int = Field(default=7200, ge=60)
+
+    @property
+    def cors_origin_list(self) -> list[str]:
+        return [origin.strip() for origin in self.cors_origins.split(",") if origin.strip()]
 
     model_config = SettingsConfigDict(env_file=".env", env_file_encoding="utf-8", extra="ignore")
 

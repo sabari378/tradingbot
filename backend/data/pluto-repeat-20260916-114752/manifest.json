@@ -1,0 +1,19 @@
+{
+    "Name":  "Pluto unchanged repeat",
+    "Start":  "2026-09-16T11:47:52.8045251-04:00",
+    "EndAt":  "2026-09-16T17:00:00-04:00",
+    "Timeframes":  [
+                       "M15",
+                       "M30",
+                       "H1"
+                   ],
+    "Strategies":  10,
+    "RiskPercent":  0.25,
+    "MaximumLots":  0.05,
+    "DollarCaps":  0,
+    "PositionCountCap":  0,
+    "RiskReward":  2,
+    "InitialEquity":  9936.2,
+    "InitialOpenPositions":  0,
+    "Output":  "backend/data/pluto-repeat-20260916-114752"
+}

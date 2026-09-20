@@ -1,0 +1,97 @@
+{"event": "CATALOG_STARTED", "timestamp": "2026-09-16T15:47:53.339179+00:00", "strategy": "liquidity_sweep", "symbol": "GOLD.i#", "timeframes": ["M15", "M30", "H1"], "end_at": "2026-09-16T17:00:00-04:00", "risk_dollars": 0.0, "total_risk_dollars": 0.0, "risk_reward": 2, "max_positions": null}
+{"event": "SIGNAL_CONSUMED", "timestamp": "2026-09-16T15:47:53.763795+00:00", "signal_key": "M15:1789583400", "timeframe": "M15"}
+{"event": "SCAN", "timestamp": "2026-09-16T15:47:53.763953+00:00", "timeframe": "M15", "direction": null, "confluences": []}
+{"event": "SIGNAL_CONSUMED", "timestamp": "2026-09-16T15:47:53.784526+00:00", "signal_key": "M30:1789581600", "timeframe": "M30"}
+{"event": "SCAN", "timestamp": "2026-09-16T15:47:53.784660+00:00", "timeframe": "M30", "direction": null, "confluences": []}
+{"event": "SIGNAL_CONSUMED", "timestamp": "2026-09-16T15:47:53.816373+00:00", "signal_key": "H1:1789578000", "timeframe": "H1"}
+{"event": "SCAN", "timestamp": "2026-09-16T15:47:53.816495+00:00", "timeframe": "H1", "direction": null, "confluences": []}
+{"event": "SIGNAL_CONSUMED", "timestamp": "2026-09-16T16:00:24.881824+00:00", "signal_key": "M15:1789584300", "timeframe": "M15"}
+{"event": "SCAN", "timestamp": "2026-09-16T16:00:24.882183+00:00", "timeframe": "M15", "direction": "SELL", "confluences": ["buy_side_sweep"]}
+{"event": "ORDER_INTENT", "timestamp": "2026-09-16T16:00:24.891379+00:00", "signal_key": "M15:1789584300", "timeframe": "M15", "request": {"action": 1, "symbol": "GOLD.i#", "type": 1, "volume": 0.02, "price": 4352.45, "sl": 4362.57, "tp": 4332.21, "deviation": 20, "magic": 1302020070, "comment": "catalog:7:M15", "type_time": 0, "type_filling": 1}, "planned_risk": 20.24}
+{"event": "FILLED", "timestamp": "2026-09-16T16:00:25.013843+00:00", "timeframe": "M15", "ticket": 1026353712, "direction": "SELL", "entry": 4352.45, "stop_loss": 4362.57, "take_profit": 4332.21, "volume": 0.02, "planned_risk": 20.24, "magic": 1302020070}
+{"event": "SIGNAL_CONSUMED", "timestamp": "2026-09-16T16:00:25.021113+00:00", "signal_key": "M30:1789583400", "timeframe": "M30"}
+{"event": "SCAN", "timestamp": "2026-09-16T16:00:25.022168+00:00", "timeframe": "M30", "direction": "SELL", "confluences": ["buy_side_sweep"]}
+{"event": "ORDER_INTENT", "timestamp": "2026-09-16T16:00:25.026269+00:00", "signal_key": "M30:1789583400", "timeframe": "M30", "request": {"action": 1, "symbol": "GOLD.i#", "type": 1, "volume": 0.02, "price": 4352.45, "sl": 4362.78, "tp": 4331.79, "deviation": 20, "magic": 1302020071, "comment": "catalog:7:M30", "type_time": 0, "type_filling": 1}, "planned_risk": 20.66}
+{"event": "FILLED", "timestamp": "2026-09-16T16:00:25.123647+00:00", "timeframe": "M30", "ticket": 1026353714, "direction": "SELL", "entry": 4352.45, "stop_loss": 4362.78, "take_profit": 4331.79, "volume": 0.02, "planned_risk": 20.66, "magic": 1302020071}
+{"event": "SIGNAL_CONSUMED", "timestamp": "2026-09-16T16:00:25.130839+00:00", "signal_key": "H1:1789581600", "timeframe": "H1"}
+{"event": "SCAN", "timestamp": "2026-09-16T16:00:25.131171+00:00", "timeframe": "H1", "direction": "SELL", "confluences": ["buy_side_sweep"]}
+{"event": "ORDER_INTENT", "timestamp": "2026-09-16T16:00:25.135212+00:00", "signal_key": "H1:1789581600", "timeframe": "H1", "request": {"action": 1, "symbol": "GOLD.i#", "type": 1, "volume": 0.02, "price": 4352.45, "sl": 4363.24, "tp": 4330.87, "deviation": 20, "magic": 1302020072, "comment": "catalog:7:H1", "type_time": 0, "type_filling": 1}, "planned_risk": 21.58}
+{"event": "FILLED", "timestamp": "2026-09-16T16:00:25.237658+00:00", "timeframe": "H1", "ticket": 1026353716, "direction": "SELL", "entry": 4352.45, "stop_loss": 4363.24, "take_profit": 4330.87, "volume": 0.02, "planned_risk": 21.58, "magic": 1302020072}
+{"event": "SIGNAL_CONSUMED", "timestamp": "2026-09-16T16:15:26.572271+00:00", "signal_key": "M15:1789585200", "timeframe": "M15"}
+{"event": "SCAN", "timestamp": "2026-09-16T16:15:26.572416+00:00", "timeframe": "M15", "direction": null, "confluences": []}
+{"event": "SIGNAL_CONSUMED", "timestamp": "2026-09-16T16:30:27.735863+00:00", "signal_key": "M15:1789586100", "timeframe": "M15"}
+{"event": "SCAN", "timestamp": "2026-09-16T16:30:27.736261+00:00", "timeframe": "M15", "direction": null, "confluences": []}
+{"event": "SIGNAL_CONSUMED", "timestamp": "2026-09-16T16:30:27.742868+00:00", "signal_key": "M30:1789585200", "timeframe": "M30"}
+{"event": "SCAN", "timestamp": "2026-09-16T16:30:27.742966+00:00", "timeframe": "M30", "direction": null, "confluences": []}
+{"event": "SIGNAL_CONSUMED", "timestamp": "2026-09-16T16:44:58.967116+00:00", "signal_key": "M15:1789587000", "timeframe": "M15"}
+{"event": "SCAN", "timestamp": "2026-09-16T16:44:58.967242+00:00", "timeframe": "M15", "direction": null, "confluences": []}
+{"event": "SIGNAL_CONSUMED", "timestamp": "2026-09-16T17:00:00.345720+00:00", "signal_key": "M15:1789587900", "timeframe": "M15"}
+{"event": "SCAN", "timestamp": "2026-09-16T17:00:00.345964+00:00", "timeframe": "M15", "direction": null, "confluences": []}
+{"event": "SIGNAL_CONSUMED", "timestamp": "2026-09-16T17:00:00.352526+00:00", "signal_key": "M30:1789587000", "timeframe": "M30"}
+{"event": "SCAN", "timestamp": "2026-09-16T17:00:00.352695+00:00", "timeframe": "M30", "direction": null, "confluences": []}
+{"event": "SIGNAL_CONSUMED", "timestamp": "2026-09-16T17:00:00.576399+00:00", "signal_key": "H1:1789585200", "timeframe": "H1"}
+{"event": "SCAN", "timestamp": "2026-09-16T17:00:00.576704+00:00", "timeframe": "H1", "direction": null, "confluences": []}
+{"event": "SIGNAL_CONSUMED", "timestamp": "2026-09-16T17:15:01.899117+00:00", "signal_key": "M15:1789588800", "timeframe": "M15"}
+{"event": "SCAN", "timestamp": "2026-09-16T17:15:01.899359+00:00", "timeframe": "M15", "direction": null, "confluences": []}
+{"event": "SIGNAL_CONSUMED", "timestamp": "2026-09-16T17:30:03.325136+00:00", "signal_key": "M15:1789589700", "timeframe": "M15"}
+{"event": "SCAN", "timestamp": "2026-09-16T17:30:03.325475+00:00", "timeframe": "M15", "direction": null, "confluences": []}
+{"event": "SIGNAL_CONSUMED", "timestamp": "2026-09-16T17:30:03.332537+00:00", "signal_key": "M30:1789588800", "timeframe": "M30"}
+{"event": "SCAN", "timestamp": "2026-09-16T17:30:03.332895+00:00", "timeframe": "M30", "direction": null, "confluences": []}
+{"event": "SIGNAL_CONSUMED", "timestamp": "2026-09-16T17:45:04.655928+00:00", "signal_key": "M15:1789590600", "timeframe": "M15"}
+{"event": "SCAN", "timestamp": "2026-09-16T17:45:04.656393+00:00", "timeframe": "M15", "direction": null, "confluences": []}
+{"event": "CLOSED", "timestamp": "2026-09-16T18:00:05.839314+00:00", "ticket": 1026353712, "net_pnl": -26.18, "pnl_r": -1.2934782608695654, "deals": [{"ticket": 1012741406, "price": 4352.45, "entry": 0, "reason": 3}, {"ticket": 1012896987, "price": 4365.54, "entry": 1, "reason": 4}]}
+{"event": "CLOSED", "timestamp": "2026-09-16T18:00:05.839622+00:00", "ticket": 1026353714, "net_pnl": -26.18, "pnl_r": -1.2671829622458857, "deals": [{"ticket": 1012741408, "price": 4352.45, "entry": 0, "reason": 3}, {"ticket": 1012897009, "price": 4365.54, "entry": 1, "reason": 4}]}
+{"event": "CLOSED", "timestamp": "2026-09-16T18:00:05.840175+00:00", "ticket": 1026353716, "net_pnl": -26.18, "pnl_r": -1.2131603336422614, "deals": [{"ticket": 1012741410, "price": 4352.45, "entry": 0, "reason": 3}, {"ticket": 1012897020, "price": 4365.54, "entry": 1, "reason": 4}]}
+{"event": "SIGNAL_CONSUMED", "timestamp": "2026-09-16T18:00:05.844919+00:00", "signal_key": "M15:1789591500", "timeframe": "M15"}
+{"event": "SCAN", "timestamp": "2026-09-16T18:00:05.845146+00:00", "timeframe": "M15", "direction": "SELL", "confluences": ["buy_side_sweep"]}
+{"event": "ORDER_INTENT", "timestamp": "2026-09-16T18:00:05.848932+00:00", "signal_key": "M15:1789591500", "timeframe": "M15", "request": {"action": 1, "symbol": "GOLD.i#", "type": 1, "volume": 0.04, "price": 4360.87, "sl": 4366.81, "tp": 4348.99, "deviation": 20, "magic": 1302020070, "comment": "catalog:7:M15", "type_time": 0, "type_filling": 1}, "planned_risk": 23.76}
+{"event": "FILLED", "timestamp": "2026-09-16T18:00:06.036586+00:00", "timeframe": "M15", "ticket": 1026521309, "direction": "SELL", "entry": 4361.06, "stop_loss": 4366.81, "take_profit": 4348.99, "volume": 0.04, "planned_risk": 23.76, "magic": 1302020070}
+{"event": "SIGNAL_CONSUMED", "timestamp": "2026-09-16T18:00:06.044734+00:00", "signal_key": "M30:1789590600", "timeframe": "M30"}
+{"event": "SCAN", "timestamp": "2026-09-16T18:00:06.045090+00:00", "timeframe": "M30", "direction": "SELL", "confluences": ["buy_side_sweep"]}
+{"event": "ORDER_INTENT", "timestamp": "2026-09-16T18:00:06.048925+00:00", "signal_key": "M30:1789590600", "timeframe": "M30", "request": {"action": 1, "symbol": "GOLD.i#", "type": 1, "volume": 0.04, "price": 4361.06, "sl": 4367.22, "tp": 4348.74, "deviation": 20, "magic": 1302020071, "comment": "catalog:7:M30", "type_time": 0, "type_filling": 1}, "planned_risk": 24.64}
+{"event": "FILLED", "timestamp": "2026-09-16T18:00:06.150407+00:00", "timeframe": "M30", "ticket": 1026521387, "direction": "SELL", "entry": 4361.62, "stop_loss": 4367.22, "take_profit": 4348.74, "volume": 0.04, "planned_risk": 24.64, "magic": 1302020071}
+{"event": "SIGNAL_CONSUMED", "timestamp": "2026-09-16T18:00:06.158421+00:00", "signal_key": "H1:1789588800", "timeframe": "H1"}
+{"event": "SCAN", "timestamp": "2026-09-16T18:00:06.159692+00:00", "timeframe": "H1", "direction": "SELL", "confluences": ["buy_side_sweep"]}
+{"event": "ORDER_INTENT", "timestamp": "2026-09-16T18:00:06.163981+00:00", "signal_key": "H1:1789588800", "timeframe": "H1", "request": {"action": 1, "symbol": "GOLD.i#", "type": 1, "volume": 0.04, "price": 4361.62, "sl": 4367.49, "tp": 4349.88, "deviation": 20, "magic": 1302020072, "comment": "catalog:7:H1", "type_time": 0, "type_filling": 1}, "planned_risk": 23.48}
+{"event": "FILLED", "timestamp": "2026-09-16T18:00:06.272854+00:00", "timeframe": "H1", "ticket": 1026521484, "direction": "SELL", "entry": 4364.25, "stop_loss": 4367.49, "take_profit": 4349.88, "volume": 0.04, "planned_risk": 23.48, "magic": 1302020072}
+{"event": "CLOSED", "timestamp": "2026-09-16T18:00:36.302244+00:00", "ticket": 1026521309, "net_pnl": -23.16, "pnl_r": -0.9747474747474747, "deals": [{"ticket": 1012907697, "price": 4361.06, "entry": 0, "reason": 3}, {"ticket": 1012908932, "price": 4366.85, "entry": 1, "reason": 4}]}
+{"event": "CLOSED", "timestamp": "2026-09-16T18:00:36.302691+00:00", "ticket": 1026521387, "net_pnl": -26.04, "pnl_r": -1.0568181818181817, "deals": [{"ticket": 1012907786, "price": 4361.62, "entry": 0, "reason": 3}, {"ticket": 1012909208, "price": 4368.13, "entry": 1, "reason": 4}]}
+{"event": "CLOSED", "timestamp": "2026-09-16T18:00:36.303054+00:00", "ticket": 1026521484, "net_pnl": -15.52, "pnl_r": -0.6609880749574105, "deals": [{"ticket": 1012907891, "price": 4364.25, "entry": 0, "reason": 3}, {"ticket": 1012909212, "price": 4368.13, "entry": 1, "reason": 4}]}
+{"event": "SIGNAL_CONSUMED", "timestamp": "2026-09-16T18:15:07.849544+00:00", "signal_key": "M15:1789592400", "timeframe": "M15"}
+{"event": "SCAN", "timestamp": "2026-09-16T18:15:07.850228+00:00", "timeframe": "M15", "direction": "SELL", "confluences": ["buy_side_sweep"]}
+{"event": "REJECTED", "timestamp": "2026-09-16T18:15:07.852506+00:00", "timeframe": "M15", "reason": "minimum_lot_exceeds_risk_budget"}
+{"event": "SIGNAL_CONSUMED", "timestamp": "2026-09-16T18:30:09.155070+00:00", "signal_key": "M15:1789593300", "timeframe": "M15"}
+{"event": "SCAN", "timestamp": "2026-09-16T18:30:09.155824+00:00", "timeframe": "M15", "direction": "BUY", "confluences": ["sell_side_sweep"]}
+{"event": "ORDER_INTENT", "timestamp": "2026-09-16T18:30:09.162039+00:00", "signal_key": "M15:1789593300", "timeframe": "M15", "request": {"action": 1, "symbol": "GOLD.i#", "type": 0, "volume": 0.01, "price": 4321.71, "sl": 4304.96, "tp": 4355.21, "deviation": 20, "magic": 1302020070, "comment": "catalog:7:M15", "type_time": 0, "type_filling": 1}, "planned_risk": 16.75}
+{"event": "FILLED", "timestamp": "2026-09-16T18:30:09.263684+00:00", "timeframe": "M15", "ticket": 1026735621, "direction": "BUY", "entry": 4321.7, "stop_loss": 4304.96, "take_profit": 4355.21, "volume": 0.01, "planned_risk": 16.75, "magic": 1302020070}
+{"event": "SIGNAL_CONSUMED", "timestamp": "2026-09-16T18:30:09.282394+00:00", "signal_key": "M30:1789592400", "timeframe": "M30"}
+{"event": "SCAN", "timestamp": "2026-09-16T18:30:09.282774+00:00", "timeframe": "M30", "direction": "SELL", "confluences": ["buy_side_sweep"]}
+{"event": "REJECTED", "timestamp": "2026-09-16T18:30:09.284483+00:00", "timeframe": "M30", "reason": "minimum_lot_exceeds_risk_budget"}
+{"event": "CLOSED", "timestamp": "2026-09-16T18:31:39.406267+00:00", "ticket": 1026735621, "net_pnl": -16.86, "pnl_r": -1.0065671641791045, "deals": [{"ticket": 1013118578, "price": 4321.7, "entry": 0, "reason": 3}, {"ticket": 1013127732, "price": 4304.84, "entry": 1, "reason": 4}]}
+{"event": "SIGNAL_CONSUMED", "timestamp": "2026-09-16T18:45:10.759047+00:00", "signal_key": "M15:1789594200", "timeframe": "M15"}
+{"event": "SCAN", "timestamp": "2026-09-16T18:45:10.759512+00:00", "timeframe": "M15", "direction": null, "confluences": []}
+{"event": "SIGNAL_CONSUMED", "timestamp": "2026-09-16T19:00:12.493230+00:00", "signal_key": "M15:1789595100", "timeframe": "M15"}
+{"event": "SCAN", "timestamp": "2026-09-16T19:00:12.493690+00:00", "timeframe": "M15", "direction": null, "confluences": []}
+{"event": "SIGNAL_CONSUMED", "timestamp": "2026-09-16T19:00:12.505108+00:00", "signal_key": "M30:1789594200", "timeframe": "M30"}
+{"event": "SCAN", "timestamp": "2026-09-16T19:00:12.505314+00:00", "timeframe": "M30", "direction": null, "confluences": []}
+{"event": "SIGNAL_CONSUMED", "timestamp": "2026-09-16T19:00:12.518968+00:00", "signal_key": "H1:1789592400", "timeframe": "H1"}
+{"event": "SCAN", "timestamp": "2026-09-16T19:00:12.519340+00:00", "timeframe": "H1", "direction": "SELL", "confluences": ["buy_side_sweep"]}
+{"event": "REJECTED", "timestamp": "2026-09-16T19:00:12.520546+00:00", "timeframe": "H1", "reason": "minimum_lot_exceeds_risk_budget"}
+{"event": "SIGNAL_CONSUMED", "timestamp": "2026-09-16T19:15:13.620595+00:00", "signal_key": "M15:1789596000", "timeframe": "M15"}
+{"event": "SCAN", "timestamp": "2026-09-16T19:15:13.620726+00:00", "timeframe": "M15", "direction": null, "confluences": []}
+{"event": "SIGNAL_CONSUMED", "timestamp": "2026-09-16T19:30:14.981013+00:00", "signal_key": "M15:1789596900", "timeframe": "M15"}
+{"event": "SCAN", "timestamp": "2026-09-16T19:30:14.981306+00:00", "timeframe": "M15", "direction": null, "confluences": []}
+{"event": "SIGNAL_CONSUMED", "timestamp": "2026-09-16T19:30:14.999249+00:00", "signal_key": "M30:1789596000", "timeframe": "M30"}
+{"event": "SCAN", "timestamp": "2026-09-16T19:30:14.999662+00:00", "timeframe": "M30", "direction": null, "confluences": []}
+{"event": "SIGNAL_CONSUMED", "timestamp": "2026-09-16T19:45:16.245900+00:00", "signal_key": "M15:1789597800", "timeframe": "M15"}
+{"event": "SCAN", "timestamp": "2026-09-16T19:45:16.246045+00:00", "timeframe": "M15", "direction": null, "confluences": []}
+{"event": "SIGNAL_CONSUMED", "timestamp": "2026-09-16T20:00:17.339511+00:00", "signal_key": "M15:1789598700", "timeframe": "M15"}
+{"event": "SCAN", "timestamp": "2026-09-16T20:00:17.339718+00:00", "timeframe": "M15", "direction": null, "confluences": []}
+{"event": "SIGNAL_CONSUMED", "timestamp": "2026-09-16T20:00:17.348579+00:00", "signal_key": "M30:1789597800", "timeframe": "M30"}
+{"event": "SCAN", "timestamp": "2026-09-16T20:00:17.348759+00:00", "timeframe": "M30", "direction": null, "confluences": []}
+{"event": "SIGNAL_CONSUMED", "timestamp": "2026-09-16T20:00:17.356447+00:00", "signal_key": "H1:1789596000", "timeframe": "H1"}
+{"event": "SCAN", "timestamp": "2026-09-16T20:00:17.356792+00:00", "timeframe": "H1", "direction": "BUY", "confluences": ["sell_side_sweep"]}
+{"event": "REJECTED", "timestamp": "2026-09-16T20:00:17.358189+00:00", "timeframe": "H1", "reason": "minimum_lot_exceeds_risk_budget"}
+{"event": "SIGNAL_CONSUMED", "timestamp": "2026-09-16T20:15:18.365053+00:00", "signal_key": "M15:1789599600", "timeframe": "M15"}
+{"event": "SCAN", "timestamp": "2026-09-16T20:15:18.365252+00:00", "timeframe": "M15", "direction": null, "confluences": []}
+{"event": "CATALOG_FINISHED", "timestamp": "2026-09-16T21:22:50.838616+00:00", "strategy": "liquidity_sweep", "positions_left_with_broker_stops": true}

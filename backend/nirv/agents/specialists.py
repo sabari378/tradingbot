@@ -5,7 +5,7 @@ from nirv.schemas.agent import AgentResult
 
 
 class ChartAgent(BaseAgent):
-    name, display_name = "chart", "Nirv Chart"
+    name, display_name = "chart", "Orion"
 
     async def analyze(self, context: dict[str, Any]) -> AgentResult:
         candles = context.get("candles", [])
@@ -28,7 +28,7 @@ class ChartAgent(BaseAgent):
 
 
 class LiquidityAgent(BaseAgent):
-    name, display_name = "liquidity", "Nirv Liquidity"
+    name, display_name = "liquidity", "Ripple"
 
     async def analyze(self, context: dict[str, Any]) -> AgentResult:
         setup = context.get("setup")
@@ -53,7 +53,7 @@ class LiquidityAgent(BaseAgent):
 
 
 class VolumeAgent(BaseAgent):
-    name, display_name = "volume", "Nirv Volume"
+    name, display_name = "volume", "Pulse"
 
     async def analyze(self, context: dict[str, Any]) -> AgentResult:
         candles = context.get("candles", [])
@@ -78,7 +78,7 @@ class VolumeAgent(BaseAgent):
 
 
 class NewsAgent(BaseAgent):
-    name, display_name = "news", "Nirv News"
+    name, display_name = "news", "Beacon"
 
     async def analyze(self, context: dict[str, Any]) -> AgentResult:
         return AgentResult(
@@ -91,7 +91,7 @@ class NewsAgent(BaseAgent):
 
 
 class SignalAgent(BaseAgent):
-    name, display_name = "signal", "Nirv Signal"
+    name, display_name = "signal", "Atlas"
 
     async def analyze(self, context: dict[str, Any]) -> AgentResult:
         setup = context.get("setup")
@@ -110,7 +110,7 @@ class SignalAgent(BaseAgent):
 
 
 class RiskAgent(BaseAgent):
-    name, display_name = "risk", "Nirv Risk"
+    name, display_name = "risk", "Sentinel"
 
     async def analyze(self, context: dict[str, Any]) -> AgentResult:
         return AgentResult(
@@ -122,7 +122,7 @@ class RiskAgent(BaseAgent):
 
 
 class ExecutionAgent(BaseAgent):
-    name, display_name = "execution", "Nirv Execution"
+    name, display_name = "execution", "Forge"
 
     async def analyze(self, context: dict[str, Any]) -> AgentResult:
         return AgentResult(

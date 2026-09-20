@@ -1,0 +1,7 @@
+{"event":"DOUBLE_TOP_STARTED","timestamp":"2026-09-07T12:22:52.479808+00:00","symbol":"GOLD.i#","timeframe":"M15","duration_seconds":7200,"interval_seconds":5,"risk_percent":0.25,"risk_reward":0.8,"max_positions":2,"forming_candle_enabled":true,"magic":1302015914}
+{"event":"DOUBLE_TOP_HEARTBEAT","timestamp":"2026-09-07T12:22:53.579399+00:00","current_bar_time":1788794100,"direction":null,"reasons":["second_peak_stale"],"strategy_positions":0,"all_positions":0}
+{"event":"DOUBLE_TOP_HEARTBEAT","timestamp":"2026-09-07T12:23:55.876840+00:00","current_bar_time":1788794100,"direction":null,"reasons":["second_peak_stale"],"strategy_positions":0,"all_positions":0}
+{"event":"DOUBLE_TOP_HEARTBEAT","timestamp":"2026-09-07T12:24:58.020994+00:00","current_bar_time":1788794100,"direction":null,"reasons":["second_peak_stale"],"strategy_positions":0,"all_positions":0}
+{"event":"DOUBLE_TOP_HEARTBEAT","timestamp":"2026-09-07T12:26:00.171568+00:00","current_bar_time":1788794100,"direction":null,"reasons":["second_peak_stale"],"strategy_positions":0,"all_positions":0}
+{"event":"DOUBLE_TOP_HEARTBEAT","timestamp":"2026-09-07T12:27:02.305959+00:00","current_bar_time":1788794100,"direction":null,"reasons":["second_peak_stale"],"strategy_positions":0,"all_positions":0}
+{"event":"DOUBLE_TOP_HEARTBEAT","timestamp":"2026-09-07T12:28:04.451691+00:00","current_bar_time":1788794100,"direction":null,"reasons":["second_peak_stale"],"strategy_positions":0,"all_positions":0}

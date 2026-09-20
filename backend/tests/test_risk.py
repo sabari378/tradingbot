@@ -1,5 +1,8 @@
+import pytest
+
 from nirv.core.config import Settings
 from nirv.core.enums import TradeDirection
+from nirv.risk.calculator import SymbolSpecification, calculate_position_size
 from nirv.risk.policy import evaluate_risk
 
 
@@ -55,3 +58,9 @@ def test_risk_accepts_valid_trade() -> None:
         settings=settings(),
     )
     assert decision.approved
+
+
+def test_position_size_rejects_broker_minimum_that_exceeds_risk() -> None:
+    specification = SymbolSpecification(symbol="XAUUSD", contract_size=100, min_volume=0.01)
+    with pytest.raises(ValueError, match="broker minimum"):
+        calculate_position_size(100, 0.01, 100, 90, specification)

@@ -1,0 +1,9 @@
+{"event":"HIERARCHICAL_STARTED","timestamp":"2026-09-01T02:45:36.646899+00:00","strategy_mode":"strict"}
+{"event":"HIERARCHICAL_SCAN","timestamp":"2026-09-01T02:45:37.665289+00:00","candle_time":1788241200,"direction":null,"reasons":["h1_bias_missing"],"stop_loss":null}
+{"event":"HIERARCHICAL_SCAN","timestamp":"2026-09-01T02:50:10.467226+00:00","candle_time":1788241500,"direction":null,"reasons":["h1_bias_missing"],"stop_loss":null}
+{"event":"HIERARCHICAL_SCAN","timestamp":"2026-09-01T02:55:14.120256+00:00","candle_time":1788241800,"direction":null,"reasons":["h1_bias_missing"],"stop_loss":null}
+{"event":"HIERARCHICAL_SCAN","timestamp":"2026-09-01T03:00:17.305139+00:00","candle_time":1788242100,"direction":null,"reasons":["h1_bias_missing"],"stop_loss":null}
+{"event":"HIERARCHICAL_SCAN","timestamp":"2026-09-01T03:05:20.347010+00:00","candle_time":1788242400,"direction":null,"reasons":["h1_bias_missing"],"stop_loss":null}
+{"event":"HIERARCHICAL_SCAN","timestamp":"2026-09-01T03:10:23.758182+00:00","candle_time":1788242700,"direction":null,"reasons":["h1_bias_missing"],"stop_loss":null}
+{"event":"HIERARCHICAL_SCAN","timestamp":"2026-09-01T03:15:26.907708+00:00","candle_time":1788243000,"direction":null,"reasons":["h1_bias_missing"],"stop_loss":null}
+{"event":"HIERARCHICAL_FINISHED","timestamp":"2026-09-01T04:57:45.898599+00:00"}

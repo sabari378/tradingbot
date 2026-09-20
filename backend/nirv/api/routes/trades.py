@@ -6,15 +6,18 @@ from nirv.core.enums import ExecutionMode
 from nirv.core.security import require_api_key, require_running
 from nirv.execution.demo import DemoExecutionEngine
 from nirv.execution.paper import PaperExecutionEngine
-from nirv.schemas.trade import TradeCandidate
+from nirv.schemas.trade import TradeCandidate, TradeCreate
 from nirv.services.trading_service import trading_service
 
 router = APIRouter(tags=["trades"])
 
 
 @router.post("/trades", dependencies=[Depends(require_api_key)])
-async def create_trade(trade: TradeCandidate) -> TradeCandidate:
-    return trading_service.create(trade)
+async def create_trade(trade: TradeCreate) -> TradeCandidate:
+    try:
+        return trading_service.create(trade)
+    except ValueError as error:
+        raise HTTPException(422, str(error)) from error
 
 
 @router.get("/trades")

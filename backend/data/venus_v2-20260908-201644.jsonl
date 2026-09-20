@@ -1,0 +1,17 @@
+{"event":"VENUS_V2_STARTED","timestamp":"2026-09-09T00:16:44.772008+00:00","duration_seconds":7200,"risk_percent":0.25,"management":["structure_target","one_r_partial","breakeven","m5_reversal_exit"],"magic":1302015913}
+{"event":"VENUS_V2_SCAN","timestamp":"2026-09-09T00:16:45.556294+00:00","timeframe":"M5","candle_time":1788923400,"direction":"SELL","score":2,"confluences":["bearish_mss","volume_confirmation"],"positions":0}
+{"event":"VENUS_V2_SCAN","timestamp":"2026-09-09T00:16:45.574004+00:00","timeframe":"M15","candle_time":1788922800,"direction":null,"score":0,"confluences":[],"positions":0}
+{"event":"VENUS_V2_SCAN","timestamp":"2026-09-09T00:16:45.611752+00:00","timeframe":"H1","candle_time":1788919200,"direction":"SELL","score":1,"confluences":["bearish_mss"],"positions":0}
+{"event":"VENUS_V2_SCAN","timestamp":"2026-09-09T00:20:17.290579+00:00","timeframe":"M5","candle_time":1788923700,"direction":"SELL","score":2,"confluences":["bearish_mss","volume_confirmation"],"positions":0}
+{"event":"VENUS_V2_SCAN","timestamp":"2026-09-09T00:25:19.893322+00:00","timeframe":"M5","candle_time":1788924000,"direction":"SELL","score":2,"confluences":["bearish_mss","volume_confirmation"],"positions":0}
+{"event":"VENUS_V2_SCAN","timestamp":"2026-09-09T00:30:22.574353+00:00","timeframe":"M5","candle_time":1788924300,"direction":"BUY","score":2,"confluences":["sell_side_sweep","volume_confirmation"],"positions":0}
+{"event":"VENUS_V2_SCAN","timestamp":"2026-09-09T00:30:22.589766+00:00","timeframe":"M15","candle_time":1788923700,"direction":null,"score":0,"confluences":[],"positions":0}
+{"event":"VENUS_V2_SCAN","timestamp":"2026-09-09T00:35:25.132308+00:00","timeframe":"M5","candle_time":1788924600,"direction":null,"score":0,"confluences":[],"positions":0}
+{"event":"VENUS_V2_SCAN","timestamp":"2026-09-09T00:40:27.699155+00:00","timeframe":"M5","candle_time":1788924900,"direction":null,"score":0,"confluences":[],"positions":0}
+{"event":"VENUS_V2_SCAN","timestamp":"2026-09-09T00:45:30.267680+00:00","timeframe":"M5","candle_time":1788925200,"direction":null,"score":0,"confluences":[],"positions":0}
+{"event":"VENUS_V2_SCAN","timestamp":"2026-09-09T00:45:30.284728+00:00","timeframe":"M15","candle_time":1788924600,"direction":null,"score":0,"confluences":[],"positions":0}
+{"event":"VENUS_V2_SCAN","timestamp":"2026-09-09T00:50:02.529599+00:00","timeframe":"M5","candle_time":1788925500,"direction":"BUY","score":1,"confluences":["bullish_fvg"],"positions":0}
+{"event":"VENUS_V2_SCAN","timestamp":"2026-09-09T00:55:05.105747+00:00","timeframe":"M5","candle_time":1788925800,"direction":"SELL","score":2,"confluences":["buy_side_sweep","volume_confirmation"],"positions":0}
+{"event":"VENUS_V2_SCAN","timestamp":"2026-09-09T01:00:07.754388+00:00","timeframe":"M5","candle_time":1788926100,"direction":"BUY","score":2,"confluences":["bullish_mss","bullish_fvg"],"positions":0}
+{"event":"VENUS_V2_SCAN","timestamp":"2026-09-09T01:00:07.772714+00:00","timeframe":"M15","candle_time":1788925500,"direction":"BUY","score":3,"confluences":["bullish_mss","bullish_fvg","volume_confirmation"],"positions":0}
+{"event":"VENUS_V2_SCAN","timestamp":"2026-09-09T01:00:07.793089+00:00","timeframe":"H1","candle_time":1788922800,"direction":"BUY","score":1,"confluences":["sell_side_sweep"],"positions":0}

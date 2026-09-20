@@ -1,0 +1,5 @@
+{"event":"VENUS_V2_STARTED","timestamp":"2026-09-07T12:22:52.466054+00:00","duration_seconds":7200,"risk_percent":0.25,"management":["structure_target","one_r_partial","breakeven","m5_reversal_exit"],"magic":1302015913}
+{"event":"VENUS_V2_SCAN","timestamp":"2026-09-07T12:22:53.581900+00:00","timeframe":"M5","candle_time":1788794100,"direction":"BUY","score":1,"confluences":["bullish_mss"],"positions":0}
+{"event":"VENUS_V2_SCAN","timestamp":"2026-09-07T12:22:53.609121+00:00","timeframe":"M15","candle_time":1788793200,"direction":null,"score":0,"confluences":[],"positions":0}
+{"event":"VENUS_V2_SCAN","timestamp":"2026-09-07T12:22:53.653963+00:00","timeframe":"H1","candle_time":1788789600,"direction":null,"score":0,"confluences":[],"positions":0}
+{"event":"VENUS_V2_SCAN","timestamp":"2026-09-07T12:25:24.660768+00:00","timeframe":"M5","candle_time":1788794400,"direction":"BUY","score":1,"confluences":["bullish_mss"],"positions":0}

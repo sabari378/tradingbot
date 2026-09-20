@@ -20,6 +20,10 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--interval", type=int, default=60, help="Seconds between scans.")
     parser.add_argument("--gateway", default="http://127.0.0.1:8100")
     parser.add_argument("--output", default="backend/data/paper-session.jsonl")
+    parser.add_argument("--strategy-id", default="baseline")
+    parser.add_argument("--signals", default="liquidity,mss,fvg")
+    parser.add_argument("--require-volume", action="store_true")
+    parser.add_argument("--risk-reward", type=float, default=2.0)
     parser.add_argument(
         "--allow-no-news",
         action="store_true",
@@ -66,6 +70,8 @@ async def run_session(args: argparse.Namespace) -> None:
     output_path.parent.mkdir(parents=True, exist_ok=True)
     started = datetime.now(timezone.utc)
     position: dict[str, Any] | None = None
+    last_quote: dict[str, Any] | None = None
+    enabled_signals = {signal.strip().lower() for signal in args.signals.split(",") if signal.strip()}
 
     handle = output_path.open("a", encoding="utf-8")
     async with httpx.AsyncClient(base_url=args.gateway, timeout=15) as client:
@@ -77,6 +83,10 @@ async def run_session(args: argparse.Namespace) -> None:
                 "started_at": started.isoformat(),
                 "symbol": args.symbol,
                 "mode": "PAPER",
+                "strategy_id": args.strategy_id,
+                "signals": sorted(enabled_signals),
+                "require_volume": args.require_volume,
+                "risk_reward": args.risk_reward,
             },
         )
         end_at = asyncio.get_running_loop().time() + args.duration
@@ -87,8 +97,18 @@ async def run_session(args: argparse.Namespace) -> None:
             quote_response = await client.get(f"/symbol/{symbol_path}")
             quote_response.raise_for_status()
             quote = quote_response.json()
+            last_quote = quote
             candles = candles_from_payload(candles_response.json())
-            setup: SetupDecision = analyze_setup(candles, news_blocked=not args.allow_no_news)
+            setup: SetupDecision = analyze_setup(
+                candles,
+                news_blocked=not args.allow_no_news,
+                risk_reward=args.risk_reward,
+                use_liquidity="liquidity" in enabled_signals,
+                use_mss="mss" in enabled_signals,
+                use_fvg="fvg" in enabled_signals,
+                use_volume=args.strategy_id == "baseline" or args.require_volume,
+                require_volume=args.require_volume,
+            )
             event: dict[str, Any] = {
                 "event": "SCAN",
                 "timestamp": now.isoformat(),
@@ -140,6 +160,25 @@ async def run_session(args: argparse.Namespace) -> None:
 
             await asyncio.sleep(min(args.interval, max(0, end_at - asyncio.get_running_loop().time())))
 
+        if position is not None and last_quote is not None:
+            exit_price = float(last_quote["bid"] if position["direction"] == "SELL" else last_quote["ask"])
+            pnl_points = (
+                position["entry"] - exit_price
+                if position["direction"] == "SELL"
+                else exit_price - position["entry"]
+            )
+            write_event(
+                handle,
+                {
+                    "event": "PAPER_CLOSED",
+                    "timestamp": datetime.now(timezone.utc).isoformat(),
+                    "reason": "SESSION_END",
+                    "entry": position["entry"],
+                    "exit": exit_price,
+                    "pnl_points": round(pnl_points, 2),
+                },
+            )
+            position = None
         write_event(
             handle,
             {

@@ -1,0 +1,7 @@
+{"event":"DOUBLE_TOP_STARTED","timestamp":"2026-09-09T00:16:44.786513+00:00","symbol":"GOLD.i#","timeframe":"M15","duration_seconds":7200,"interval_seconds":5,"risk_percent":0.25,"risk_reward":0.8,"max_positions":2,"forming_candle_enabled":true,"magic":1302015914}
+{"event":"DOUBLE_TOP_HEARTBEAT","timestamp":"2026-09-09T00:16:45.556074+00:00","current_bar_time":1788923700,"direction":null,"reasons":["bearish_displacement_missing"],"strategy_positions":0,"all_positions":0}
+{"event":"DOUBLE_TOP_HEARTBEAT","timestamp":"2026-09-09T00:17:48.157847+00:00","current_bar_time":1788923700,"direction":null,"reasons":["bearish_displacement_missing"],"strategy_positions":0,"all_positions":0}
+{"event":"DOUBLE_TOP_HEARTBEAT","timestamp":"2026-09-09T00:18:50.748493+00:00","current_bar_time":1788923700,"direction":null,"reasons":["bearish_displacement_missing"],"strategy_positions":0,"all_positions":0}
+{"event":"DOUBLE_TOP_HEARTBEAT","timestamp":"2026-09-09T00:19:53.386502+00:00","current_bar_time":1788923700,"direction":null,"reasons":["bearish_displacement_missing"],"strategy_positions":0,"all_positions":0}
+{"event":"DOUBLE_TOP_HEARTBEAT","timestamp":"2026-09-09T00:20:56.008804+00:00","current_bar_time":1788923700,"direction":null,"reasons":["bearish_displacement_missing"],"strategy_positions":0,"all_positions":0}
+{"event":"DOUBLE_TOP_HEARTBEAT","timestamp":"2026-09-09T00:21:58.617831+00:00","current_bar_time":1788923700,"direction":null,"reasons":["bearish_displacement_missing"],"strategy_positions":0,"all_positions":0}

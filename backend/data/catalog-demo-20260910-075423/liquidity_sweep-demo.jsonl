@@ -1,0 +1,149 @@
+{"event": "CATALOG_STARTED", "timestamp": "2026-09-10T11:54:23.902580+00:00", "strategy": "liquidity_sweep", "symbol": "GOLD.i#", "timeframes": ["M15", "M30", "H1"], "end_at": "2026-09-10T17:00:00-04:00", "risk_dollars": 0.0, "total_risk_dollars": 0.0, "risk_reward": 2, "max_positions": null}
+{"event": "SIGNAL_CONSUMED", "timestamp": "2026-09-10T11:54:24.366203+00:00", "signal_key": "M15:1789050600", "timeframe": "M15"}
+{"event": "SCAN", "timestamp": "2026-09-10T11:54:24.366788+00:00", "timeframe": "M15", "direction": null, "confluences": []}
+{"event": "SIGNAL_CONSUMED", "timestamp": "2026-09-10T11:54:24.392365+00:00", "signal_key": "M30:1789048800", "timeframe": "M30"}
+{"event": "SCAN", "timestamp": "2026-09-10T11:54:24.392912+00:00", "timeframe": "M30", "direction": "BUY", "confluences": ["sell_side_sweep"]}
+{"event": "ORDER_INTENT", "timestamp": "2026-09-10T11:54:24.396841+00:00", "signal_key": "M30:1789048800", "timeframe": "M30", "request": {"action": 1, "symbol": "GOLD.i#", "type": 0, "volume": 0.03, "price": 4380.61, "sl": 4373.88, "tp": 4394.07, "deviation": 20, "magic": 1302020071, "comment": "catalog:7:M30", "type_time": 0, "type_filling": 1}, "planned_risk": 20.19}
+{"event": "FILLED", "timestamp": "2026-09-10T11:54:24.500254+00:00", "timeframe": "M30", "ticket": 1019209119, "direction": "BUY", "entry": 4380.61, "stop_loss": 4373.88, "take_profit": 4394.07, "volume": 0.03, "planned_risk": 20.19, "magic": 1302020071}
+{"event": "SIGNAL_CONSUMED", "timestamp": "2026-09-10T11:54:24.632236+00:00", "signal_key": "H1:1789045200", "timeframe": "H1"}
+{"event": "SCAN", "timestamp": "2026-09-10T11:54:24.632623+00:00", "timeframe": "H1", "direction": null, "confluences": []}
+{"event": "SIGNAL_CONSUMED", "timestamp": "2026-09-10T12:00:25.289424+00:00", "signal_key": "M15:1789051500", "timeframe": "M15"}
+{"event": "SCAN", "timestamp": "2026-09-10T12:00:25.289718+00:00", "timeframe": "M15", "direction": null, "confluences": []}
+{"event": "SIGNAL_CONSUMED", "timestamp": "2026-09-10T12:00:25.615139+00:00", "signal_key": "M30:1789050600", "timeframe": "M30"}
+{"event": "SCAN", "timestamp": "2026-09-10T12:00:25.615421+00:00", "timeframe": "M30", "direction": null, "confluences": []}
+{"event": "SIGNAL_CONSUMED", "timestamp": "2026-09-10T12:00:25.625631+00:00", "signal_key": "H1:1789048800", "timeframe": "H1"}
+{"event": "SCAN", "timestamp": "2026-09-10T12:00:25.625743+00:00", "timeframe": "H1", "direction": null, "confluences": []}
+{"event": "CLOSED", "timestamp": "2026-09-10T12:00:55.665177+00:00", "ticket": 1019209119, "net_pnl": -20.4, "pnl_r": -1.0104011887072808, "deals": [{"ticket": 1005722129, "price": 4380.61, "entry": 0, "reason": 3}, {"ticket": 1005734924, "price": 4373.81, "entry": 1, "reason": 4}]}
+{"event": "SIGNAL_CONSUMED", "timestamp": "2026-09-10T12:15:26.803851+00:00", "signal_key": "M15:1789052400", "timeframe": "M15"}
+{"event": "SCAN", "timestamp": "2026-09-10T12:15:26.804367+00:00", "timeframe": "M15", "direction": "BUY", "confluences": ["sell_side_sweep"]}
+{"event": "ORDER_INTENT", "timestamp": "2026-09-10T12:15:26.806726+00:00", "signal_key": "M15:1789052400", "timeframe": "M15", "request": {"action": 1, "symbol": "GOLD.i#", "type": 0, "volume": 0.03, "price": 4376.02, "sl": 4369.07, "tp": 4389.92, "deviation": 20, "magic": 1302020070, "comment": "catalog:7:M15", "type_time": 0, "type_filling": 1}, "planned_risk": 20.85}
+{"event": "FILLED", "timestamp": "2026-09-10T12:15:26.901913+00:00", "timeframe": "M15", "ticket": 1019255738, "direction": "BUY", "entry": 4376.09, "stop_loss": 4369.07, "take_profit": 4389.92, "volume": 0.03, "planned_risk": 20.85, "magic": 1302020070}
+{"event": "CLOSED", "timestamp": "2026-09-10T12:17:27.068163+00:00", "ticket": 1019255738, "net_pnl": -22.02, "pnl_r": -1.056115107913669, "deals": [{"ticket": 1005768625, "price": 4376.09, "entry": 0, "reason": 3}, {"ticket": 1005772766, "price": 4368.75, "entry": 1, "reason": 4}]}
+{"event": "SIGNAL_CONSUMED", "timestamp": "2026-09-10T12:30:28.559560+00:00", "signal_key": "M15:1789053300", "timeframe": "M15"}
+{"event": "SCAN", "timestamp": "2026-09-10T12:30:28.560275+00:00", "timeframe": "M15", "direction": null, "confluences": []}
+{"event": "SIGNAL_CONSUMED", "timestamp": "2026-09-10T12:30:28.875873+00:00", "signal_key": "M30:1789052400", "timeframe": "M30"}
+{"event": "SCAN", "timestamp": "2026-09-10T12:30:28.876294+00:00", "timeframe": "M30", "direction": null, "confluences": []}
+{"event": "SIGNAL_CONSUMED", "timestamp": "2026-09-10T12:45:00.361321+00:00", "signal_key": "M15:1789054200", "timeframe": "M15"}
+{"event": "SCAN", "timestamp": "2026-09-10T12:45:00.361763+00:00", "timeframe": "M15", "direction": null, "confluences": []}
+{"event": "SIGNAL_CONSUMED", "timestamp": "2026-09-10T13:00:01.569012+00:00", "signal_key": "M15:1789055100", "timeframe": "M15"}
+{"event": "SCAN", "timestamp": "2026-09-10T13:00:01.569647+00:00", "timeframe": "M15", "direction": null, "confluences": []}
+{"event": "SIGNAL_CONSUMED", "timestamp": "2026-09-10T13:00:01.878931+00:00", "signal_key": "M30:1789054200", "timeframe": "M30"}
+{"event": "SCAN", "timestamp": "2026-09-10T13:00:01.879531+00:00", "timeframe": "M30", "direction": null, "confluences": []}
+{"event": "SIGNAL_CONSUMED", "timestamp": "2026-09-10T13:00:01.887436+00:00", "signal_key": "H1:1789052400", "timeframe": "H1"}
+{"event": "SCAN", "timestamp": "2026-09-10T13:00:01.887557+00:00", "timeframe": "H1", "direction": null, "confluences": []}
+{"event": "SIGNAL_CONSUMED", "timestamp": "2026-09-10T13:15:02.886443+00:00", "signal_key": "M15:1789056000", "timeframe": "M15"}
+{"event": "SCAN", "timestamp": "2026-09-10T13:15:02.886628+00:00", "timeframe": "M15", "direction": null, "confluences": []}
+{"event": "SIGNAL_CONSUMED", "timestamp": "2026-09-10T13:30:03.698296+00:00", "signal_key": "M15:1789056900", "timeframe": "M15"}
+{"event": "SCAN", "timestamp": "2026-09-10T13:30:03.698447+00:00", "timeframe": "M15", "direction": null, "confluences": []}
+{"event": "SIGNAL_CONSUMED", "timestamp": "2026-09-10T13:30:03.807241+00:00", "signal_key": "M30:1789056000", "timeframe": "M30"}
+{"event": "SCAN", "timestamp": "2026-09-10T13:30:03.807527+00:00", "timeframe": "M30", "direction": null, "confluences": []}
+{"event": "SIGNAL_CONSUMED", "timestamp": "2026-09-10T13:45:04.902219+00:00", "signal_key": "M15:1789057800", "timeframe": "M15"}
+{"event": "SCAN", "timestamp": "2026-09-10T13:45:04.902573+00:00", "timeframe": "M15", "direction": null, "confluences": []}
+{"event": "SIGNAL_CONSUMED", "timestamp": "2026-09-10T14:00:06.010645+00:00", "signal_key": "M15:1789058700", "timeframe": "M15"}
+{"event": "SCAN", "timestamp": "2026-09-10T14:00:06.010851+00:00", "timeframe": "M15", "direction": null, "confluences": []}
+{"event": "SIGNAL_CONSUMED", "timestamp": "2026-09-10T14:00:06.110485+00:00", "signal_key": "M30:1789057800", "timeframe": "M30"}
+{"event": "SCAN", "timestamp": "2026-09-10T14:00:06.110752+00:00", "timeframe": "M30", "direction": null, "confluences": []}
+{"event": "SIGNAL_CONSUMED", "timestamp": "2026-09-10T14:00:06.117300+00:00", "signal_key": "H1:1789056000", "timeframe": "H1"}
+{"event": "SCAN", "timestamp": "2026-09-10T14:00:06.117650+00:00", "timeframe": "H1", "direction": null, "confluences": []}
+{"event": "SIGNAL_CONSUMED", "timestamp": "2026-09-10T14:15:07.356830+00:00", "signal_key": "M15:1789059600", "timeframe": "M15"}
+{"event": "SCAN", "timestamp": "2026-09-10T14:15:07.357055+00:00", "timeframe": "M15", "direction": null, "confluences": []}
+{"event": "SIGNAL_CONSUMED", "timestamp": "2026-09-10T14:30:08.269381+00:00", "signal_key": "M15:1789060500", "timeframe": "M15"}
+{"event": "SCAN", "timestamp": "2026-09-10T14:30:08.269602+00:00", "timeframe": "M15", "direction": null, "confluences": []}
+{"event": "SIGNAL_CONSUMED", "timestamp": "2026-09-10T14:30:08.276482+00:00", "signal_key": "M30:1789059600", "timeframe": "M30"}
+{"event": "SCAN", "timestamp": "2026-09-10T14:30:08.276688+00:00", "timeframe": "M30", "direction": null, "confluences": []}
+{"event": "SIGNAL_CONSUMED", "timestamp": "2026-09-10T14:45:09.282926+00:00", "signal_key": "M15:1789061400", "timeframe": "M15"}
+{"event": "SCAN", "timestamp": "2026-09-10T14:45:09.283087+00:00", "timeframe": "M15", "direction": null, "confluences": []}
+{"event": "SIGNAL_CONSUMED", "timestamp": "2026-09-10T15:00:10.469033+00:00", "signal_key": "M15:1789062300", "timeframe": "M15"}
+{"event": "SCAN", "timestamp": "2026-09-10T15:00:10.469236+00:00", "timeframe": "M15", "direction": null, "confluences": []}
+{"event": "SIGNAL_CONSUMED", "timestamp": "2026-09-10T15:00:10.472592+00:00", "signal_key": "M30:1789061400", "timeframe": "M30"}
+{"event": "SCAN", "timestamp": "2026-09-10T15:00:10.472731+00:00", "timeframe": "M30", "direction": null, "confluences": []}
+{"event": "SIGNAL_CONSUMED", "timestamp": "2026-09-10T15:00:10.476817+00:00", "signal_key": "H1:1789059600", "timeframe": "H1"}
+{"event": "SCAN", "timestamp": "2026-09-10T15:00:10.476940+00:00", "timeframe": "H1", "direction": null, "confluences": []}
+{"event": "SIGNAL_CONSUMED", "timestamp": "2026-09-10T15:15:11.787490+00:00", "signal_key": "M15:1789063200", "timeframe": "M15"}
+{"event": "SCAN", "timestamp": "2026-09-10T15:15:11.787624+00:00", "timeframe": "M15", "direction": null, "confluences": []}
+{"event": "SIGNAL_CONSUMED", "timestamp": "2026-09-10T15:30:12.861155+00:00", "signal_key": "M15:1789064100", "timeframe": "M15"}
+{"event": "SCAN", "timestamp": "2026-09-10T15:30:12.861590+00:00", "timeframe": "M15", "direction": null, "confluences": []}
+{"event": "SIGNAL_CONSUMED", "timestamp": "2026-09-10T15:30:12.866561+00:00", "signal_key": "M30:1789063200", "timeframe": "M30"}
+{"event": "SCAN", "timestamp": "2026-09-10T15:30:12.866664+00:00", "timeframe": "M30", "direction": null, "confluences": []}
+{"event": "SIGNAL_CONSUMED", "timestamp": "2026-09-10T15:45:13.890423+00:00", "signal_key": "M15:1789065000", "timeframe": "M15"}
+{"event": "SCAN", "timestamp": "2026-09-10T15:45:13.890696+00:00", "timeframe": "M15", "direction": null, "confluences": []}
+{"event": "SIGNAL_CONSUMED", "timestamp": "2026-09-10T16:00:14.954804+00:00", "signal_key": "M15:1789065900", "timeframe": "M15"}
+{"event": "SCAN", "timestamp": "2026-09-10T16:00:14.955127+00:00", "timeframe": "M15", "direction": null, "confluences": []}
+{"event": "SIGNAL_CONSUMED", "timestamp": "2026-09-10T16:00:14.960249+00:00", "signal_key": "M30:1789065000", "timeframe": "M30"}
+{"event": "SCAN", "timestamp": "2026-09-10T16:00:14.960358+00:00", "timeframe": "M30", "direction": null, "confluences": []}
+{"event": "SIGNAL_CONSUMED", "timestamp": "2026-09-10T16:00:14.964840+00:00", "signal_key": "H1:1789063200", "timeframe": "H1"}
+{"event": "SCAN", "timestamp": "2026-09-10T16:00:14.964949+00:00", "timeframe": "H1", "direction": null, "confluences": []}
+{"event": "SIGNAL_CONSUMED", "timestamp": "2026-09-10T16:15:16.053808+00:00", "signal_key": "M15:1789066800", "timeframe": "M15"}
+{"event": "SCAN", "timestamp": "2026-09-10T16:15:16.054038+00:00", "timeframe": "M15", "direction": null, "confluences": []}
+{"event": "SIGNAL_CONSUMED", "timestamp": "2026-09-10T16:30:17.203039+00:00", "signal_key": "M15:1789067700", "timeframe": "M15"}
+{"event": "SCAN", "timestamp": "2026-09-10T16:30:17.203199+00:00", "timeframe": "M15", "direction": null, "confluences": []}
+{"event": "SIGNAL_CONSUMED", "timestamp": "2026-09-10T16:30:17.207402+00:00", "signal_key": "M30:1789066800", "timeframe": "M30"}
+{"event": "SCAN", "timestamp": "2026-09-10T16:30:17.207604+00:00", "timeframe": "M30", "direction": null, "confluences": []}
+{"event": "SIGNAL_CONSUMED", "timestamp": "2026-09-10T16:45:18.336884+00:00", "signal_key": "M15:1789068600", "timeframe": "M15"}
+{"event": "SCAN", "timestamp": "2026-09-10T16:45:18.337022+00:00", "timeframe": "M15", "direction": null, "confluences": []}
+{"event": "SIGNAL_CONSUMED", "timestamp": "2026-09-10T17:00:19.422878+00:00", "signal_key": "M15:1789069500", "timeframe": "M15"}
+{"event": "SCAN", "timestamp": "2026-09-10T17:00:19.423014+00:00", "timeframe": "M15", "direction": null, "confluences": []}
+{"event": "SIGNAL_CONSUMED", "timestamp": "2026-09-10T17:00:19.426306+00:00", "signal_key": "M30:1789068600", "timeframe": "M30"}
+{"event": "SCAN", "timestamp": "2026-09-10T17:00:19.426457+00:00", "timeframe": "M30", "direction": null, "confluences": []}
+{"event": "SIGNAL_CONSUMED", "timestamp": "2026-09-10T17:00:19.429729+00:00", "signal_key": "H1:1789066800", "timeframe": "H1"}
+{"event": "SCAN", "timestamp": "2026-09-10T17:00:19.429845+00:00", "timeframe": "H1", "direction": null, "confluences": []}
+{"event": "SIGNAL_CONSUMED", "timestamp": "2026-09-10T17:15:20.494662+00:00", "signal_key": "M15:1789070400", "timeframe": "M15"}
+{"event": "SCAN", "timestamp": "2026-09-10T17:15:20.494809+00:00", "timeframe": "M15", "direction": null, "confluences": []}
+{"event": "SIGNAL_CONSUMED", "timestamp": "2026-09-10T17:30:21.481835+00:00", "signal_key": "M15:1789071300", "timeframe": "M15"}
+{"event": "SCAN", "timestamp": "2026-09-10T17:30:21.481961+00:00", "timeframe": "M15", "direction": null, "confluences": []}
+{"event": "SIGNAL_CONSUMED", "timestamp": "2026-09-10T17:30:21.486775+00:00", "signal_key": "M30:1789070400", "timeframe": "M30"}
+{"event": "SCAN", "timestamp": "2026-09-10T17:30:21.486972+00:00", "timeframe": "M30", "direction": null, "confluences": []}
+{"event": "SIGNAL_CONSUMED", "timestamp": "2026-09-10T17:45:22.593804+00:00", "signal_key": "M15:1789072200", "timeframe": "M15"}
+{"event": "SCAN", "timestamp": "2026-09-10T17:45:22.594116+00:00", "timeframe": "M15", "direction": null, "confluences": []}
+{"event": "SIGNAL_CONSUMED", "timestamp": "2026-09-10T18:00:23.993967+00:00", "signal_key": "M15:1789073100", "timeframe": "M15"}
+{"event": "SCAN", "timestamp": "2026-09-10T18:00:23.994186+00:00", "timeframe": "M15", "direction": null, "confluences": []}
+{"event": "SIGNAL_CONSUMED", "timestamp": "2026-09-10T18:00:24.097003+00:00", "signal_key": "M30:1789072200", "timeframe": "M30"}
+{"event": "SCAN", "timestamp": "2026-09-10T18:00:24.097137+00:00", "timeframe": "M30", "direction": null, "confluences": []}
+{"event": "SIGNAL_CONSUMED", "timestamp": "2026-09-10T18:00:24.101482+00:00", "signal_key": "H1:1789070400", "timeframe": "H1"}
+{"event": "SCAN", "timestamp": "2026-09-10T18:00:24.101616+00:00", "timeframe": "H1", "direction": null, "confluences": []}
+{"event": "SIGNAL_CONSUMED", "timestamp": "2026-09-10T18:15:25.431337+00:00", "signal_key": "M15:1789074000", "timeframe": "M15"}
+{"event": "SCAN", "timestamp": "2026-09-10T18:15:25.431675+00:00", "timeframe": "M15", "direction": null, "confluences": []}
+{"event": "SIGNAL_CONSUMED", "timestamp": "2026-09-10T18:30:26.838661+00:00", "signal_key": "M15:1789074900", "timeframe": "M15"}
+{"event": "SCAN", "timestamp": "2026-09-10T18:30:26.838989+00:00", "timeframe": "M15", "direction": null, "confluences": []}
+{"event": "SIGNAL_CONSUMED", "timestamp": "2026-09-10T18:30:26.845958+00:00", "signal_key": "M30:1789074000", "timeframe": "M30"}
+{"event": "SCAN", "timestamp": "2026-09-10T18:30:26.846114+00:00", "timeframe": "M30", "direction": null, "confluences": []}
+{"event": "SIGNAL_CONSUMED", "timestamp": "2026-09-10T18:45:28.194595+00:00", "signal_key": "M15:1789075800", "timeframe": "M15"}
+{"event": "SCAN", "timestamp": "2026-09-10T18:45:28.194922+00:00", "timeframe": "M15", "direction": null, "confluences": []}
+{"event": "SIGNAL_CONSUMED", "timestamp": "2026-09-10T18:59:59.357278+00:00", "signal_key": "M15:1789076700", "timeframe": "M15"}
+{"event": "SCAN", "timestamp": "2026-09-10T18:59:59.357888+00:00", "timeframe": "M15", "direction": "BUY", "confluences": ["sell_side_sweep"]}
+{"event": "ORDER_INTENT", "timestamp": "2026-09-10T18:59:59.361151+00:00", "signal_key": "M15:1789076700", "timeframe": "M15", "request": {"action": 1, "symbol": "GOLD.i#", "type": 0, "volume": 0.05, "price": 4332.47, "sl": 4328.92, "tp": 4339.57, "deviation": 20, "magic": 1302020070, "comment": "catalog:7:M15", "type_time": 0, "type_filling": 1}, "planned_risk": 17.75}
+{"event": "FILLED", "timestamp": "2026-09-10T18:59:59.455165+00:00", "timeframe": "M15", "ticket": 1020121205, "direction": "BUY", "entry": 4332.35, "stop_loss": 4328.92, "take_profit": 4339.57, "volume": 0.05, "planned_risk": 17.75, "magic": 1302020070}
+{"event": "SIGNAL_CONSUMED", "timestamp": "2026-09-10T18:59:59.462177+00:00", "signal_key": "M30:1789075800", "timeframe": "M30"}
+{"event": "SCAN", "timestamp": "2026-09-10T18:59:59.462364+00:00", "timeframe": "M30", "direction": null, "confluences": []}
+{"event": "SIGNAL_CONSUMED", "timestamp": "2026-09-10T18:59:59.467390+00:00", "signal_key": "H1:1789074000", "timeframe": "H1"}
+{"event": "SCAN", "timestamp": "2026-09-10T18:59:59.467553+00:00", "timeframe": "H1", "direction": null, "confluences": []}
+{"event": "CLOSED", "timestamp": "2026-09-10T19:00:59.553396+00:00", "ticket": 1020121205, "net_pnl": -17.25, "pnl_r": -0.971830985915493, "deals": [{"ticket": 1006630031, "price": 4332.35, "entry": 0, "reason": 3}, {"ticket": 1006631770, "price": 4328.9, "entry": 1, "reason": 4}]}
+{"event": "SIGNAL_CONSUMED", "timestamp": "2026-09-10T19:15:00.907431+00:00", "signal_key": "M15:1789077600", "timeframe": "M15"}
+{"event": "SCAN", "timestamp": "2026-09-10T19:15:00.907683+00:00", "timeframe": "M15", "direction": null, "confluences": []}
+{"event": "SIGNAL_CONSUMED", "timestamp": "2026-09-10T19:30:02.220784+00:00", "signal_key": "M15:1789078500", "timeframe": "M15"}
+{"event": "SCAN", "timestamp": "2026-09-10T19:30:02.221212+00:00", "timeframe": "M15", "direction": null, "confluences": []}
+{"event": "SIGNAL_CONSUMED", "timestamp": "2026-09-10T19:30:02.226098+00:00", "signal_key": "M30:1789077600", "timeframe": "M30"}
+{"event": "SCAN", "timestamp": "2026-09-10T19:30:02.226293+00:00", "timeframe": "M30", "direction": "BUY", "confluences": ["sell_side_sweep"]}
+{"event": "ORDER_INTENT", "timestamp": "2026-09-10T19:30:02.229254+00:00", "signal_key": "M30:1789077600", "timeframe": "M30", "request": {"action": 1, "symbol": "GOLD.i#", "type": 0, "volume": 0.01, "price": 4327.56, "sl": 4311.92, "tp": 4358.84, "deviation": 20, "magic": 1302020071, "comment": "catalog:7:M30", "type_time": 0, "type_filling": 1}, "planned_risk": 15.64}
+{"event": "FILLED", "timestamp": "2026-09-10T19:30:02.324286+00:00", "timeframe": "M30", "ticket": 1020159564, "direction": "BUY", "entry": 4327.57, "stop_loss": 4311.92, "take_profit": 4358.84, "volume": 0.01, "planned_risk": 15.64, "magic": 1302020071}
+{"event": "SIGNAL_CONSUMED", "timestamp": "2026-09-10T19:45:03.193073+00:00", "signal_key": "M15:1789079400", "timeframe": "M15"}
+{"event": "SCAN", "timestamp": "2026-09-10T19:45:03.193486+00:00", "timeframe": "M15", "direction": null, "confluences": []}
+{"event": "CLOSED", "timestamp": "2026-09-10T19:48:03.358768+00:00", "ticket": 1020159564, "net_pnl": -4.12, "pnl_r": -0.26342710997442453, "deals": [{"ticket": 1006668051, "price": 4327.57, "entry": 0, "reason": 3}, {"ticket": 1006678732, "price": 4323.45, "entry": 1, "reason": 0}]}
+{"event": "SIGNAL_CONSUMED", "timestamp": "2026-09-10T20:00:04.167987+00:00", "signal_key": "M15:1789080300", "timeframe": "M15"}
+{"event": "SCAN", "timestamp": "2026-09-10T20:00:04.168493+00:00", "timeframe": "M15", "direction": null, "confluences": []}
+{"event": "SIGNAL_CONSUMED", "timestamp": "2026-09-10T20:00:04.280038+00:00", "signal_key": "M30:1789079400", "timeframe": "M30"}
+{"event": "SCAN", "timestamp": "2026-09-10T20:00:04.280576+00:00", "timeframe": "M30", "direction": null, "confluences": []}
+{"event": "SIGNAL_CONSUMED", "timestamp": "2026-09-10T20:00:04.297090+00:00", "signal_key": "H1:1789077600", "timeframe": "H1"}
+{"event": "SCAN", "timestamp": "2026-09-10T20:00:04.297662+00:00", "timeframe": "H1", "direction": "BUY", "confluences": ["sell_side_sweep"]}
+{"event": "ORDER_INTENT", "timestamp": "2026-09-10T20:00:04.302384+00:00", "signal_key": "H1:1789077600", "timeframe": "H1", "request": {"action": 1, "symbol": "GOLD.i#", "type": 0, "volume": 0.01, "price": 4324.32, "sl": 4311.38, "tp": 4350.2, "deviation": 20, "magic": 1302020072, "comment": "catalog:7:H1", "type_time": 0, "type_filling": 1}, "planned_risk": 12.94}
+{"event": "FILLED", "timestamp": "2026-09-10T20:00:04.398060+00:00", "timeframe": "H1", "ticket": 1020177381, "direction": "BUY", "entry": 4324.32, "stop_loss": 4311.38, "take_profit": 4350.2, "volume": 0.01, "planned_risk": 12.94, "magic": 1302020072}
+{"event": "SIGNAL_CONSUMED", "timestamp": "2026-09-10T20:15:05.468346+00:00", "signal_key": "M15:1789081200", "timeframe": "M15"}
+{"event": "SCAN", "timestamp": "2026-09-10T20:15:05.468506+00:00", "timeframe": "M15", "direction": null, "confluences": []}
+{"event": "CLOSED", "timestamp": "2026-09-10T20:19:35.871888+00:00", "ticket": 1020177381, "net_pnl": -2.06, "pnl_r": -0.15919629057187018, "deals": [{"ticket": 1006685348, "price": 4324.32, "entry": 0, "reason": 3}, {"ticket": 1006690990, "price": 4322.26, "entry": 1, "reason": 0}]}
+{"event": "SIGNAL_CONSUMED", "timestamp": "2026-09-10T20:30:06.765859+00:00", "signal_key": "M15:1789082100", "timeframe": "M15"}
+{"event": "SCAN", "timestamp": "2026-09-10T20:30:06.766086+00:00", "timeframe": "M15", "direction": null, "confluences": []}
+{"event": "SIGNAL_CONSUMED", "timestamp": "2026-09-10T20:30:06.963649+00:00", "signal_key": "M30:1789081200", "timeframe": "M30"}
+{"event": "SCAN", "timestamp": "2026-09-10T20:30:06.963957+00:00", "timeframe": "M30", "direction": null, "confluences": []}
+{"event": "SIGNAL_CONSUMED", "timestamp": "2026-09-10T20:45:08.124491+00:00", "signal_key": "M15:1789083000", "timeframe": "M15"}
+{"event": "SCAN", "timestamp": "2026-09-10T20:45:08.124735+00:00", "timeframe": "M15", "direction": null, "confluences": []}
+{"event": "CATALOG_FINISHED", "timestamp": "2026-09-10T21:00:00.013624+00:00", "strategy": "liquidity_sweep", "positions_left_with_broker_stops": true}

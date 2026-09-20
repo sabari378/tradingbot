@@ -11,7 +11,7 @@ def test_equal_levels_and_sweeps() -> None:
     assert liquidity_sweep([Candle(9, 10, 7, 9)], "sell_side", 8)
 
 
-def test_confluence_requires_volume_confirmation() -> None:
+def test_confluence_accepts_aligned_strategies_without_volume_confirmation() -> None:
     decision = evaluate_confluence(
         sweep="sell_side",
         mss="bullish",
@@ -19,5 +19,6 @@ def test_confluence_requires_volume_confirmation() -> None:
         volume_confirmed=False,
         news_blocked=False,
     )
-    assert decision.direction is None
-    assert decision.score == 0
+    assert decision.direction == "BUY"
+    assert "volume_confirmation" not in decision.confluences
+    assert decision.score == 3

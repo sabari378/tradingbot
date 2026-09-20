@@ -1,0 +1,38 @@
+{
+    "Name":  "Pluto unchanged repeat",
+    "Plan":  "Repeat unchanged testing over the next 10 days; this run ends at the explicitly requested cutoff",
+    "Start":  "2026-09-10T18:24:01.1416212-04:00",
+    "EndAt":  "2026-09-11T11:50:00-04:00",
+    "Timeframes":  [
+                       "M15",
+                       "M30",
+                       "H1"
+                   ],
+    "Strategies":  10,
+    "RiskPercent":  0.25,
+    "MaximumLots":  0.05,
+    "DollarCaps":  0,
+    "PositionCountCap":  0,
+    "RiskReward":  2,
+    "MaximumSpread":  0.5,
+    "Output":  "backend/data/pluto-repeat-20260910-182401",
+    "InitialOpenPositions":  0,
+    "CodeHashes":  [
+                       {
+                           "Path":  "D:\\Studies\\tradingbot\\backend\\demo_catalog_session.py",
+                           "Hash":  "B459182E01205A98B10C71E13F0362814E0AEFA82070E7F14DEAC39CDAD745C2"
+                       },
+                       {
+                           "Path":  "D:\\Studies\\tradingbot\\backend\\nirv\\strategies\\catalog.py",
+                           "Hash":  "00F5D5D1D8430060FD454A6A3718F249FB5E9C05C9173D3B4E9C391DC77BD8B0"
+                       },
+                       {
+                           "Path":  "D:\\Studies\\tradingbot\\backend\\nirv\\strategies\\setup.py",
+                           "Hash":  "8303CDC8FBD6D690441755DCBEF5604A700EE6E6C5364CD96A9A713F253B65A6"
+                       },
+                       {
+                           "Path":  "D:\\Studies\\tradingbot\\backend\\nirv\\strategies\\market_structure.py",
+                           "Hash":  "6EA9694714DCB0E463B09874B5A0A75111347D57EDBECBCD3027649131251865"
+                       }
+                   ]
+}

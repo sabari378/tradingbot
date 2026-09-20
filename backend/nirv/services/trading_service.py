@@ -1,17 +1,28 @@
 from datetime import datetime, timezone
 from uuid import UUID
 
+from nirv.core.config import get_settings
 from nirv.core.enums import TradeStatus
-from nirv.schemas.trade import TradeCandidate
+from nirv.schemas.trade import TradeCandidate, TradeCreate
 
 
 class TradingService:
     def __init__(self) -> None:
         self.trades: dict[UUID, TradeCandidate] = {}
 
-    def create(self, trade: TradeCandidate) -> TradeCandidate:
-        self.trades[trade.id] = trade.model_copy(update={"requested_at": datetime.now(timezone.utc)})
-        return self.trades[trade.id]
+    def create(self, request: TradeCreate) -> TradeCandidate:
+        settings = get_settings()
+        if request.risk_percent > settings.max_risk_percent:
+            raise ValueError("risk percent exceeds configured maximum")
+        if request.calculated_risk_reward < settings.min_risk_reward:
+            raise ValueError("risk/reward is below configured minimum")
+        trade = TradeCandidate(
+            **request.model_dump(),
+            risk_reward=request.calculated_risk_reward,
+            requested_at=datetime.now(timezone.utc),
+        )
+        self.trades[trade.id] = trade
+        return trade
 
     def get(self, trade_id: UUID) -> TradeCandidate | None:
         return self.trades.get(trade_id)

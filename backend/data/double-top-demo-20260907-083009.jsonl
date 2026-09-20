@@ -1,0 +1,2 @@
+{"event":"DOUBLE_TOP_STARTED","timestamp":"2026-09-07T12:30:09.995488+00:00","symbol":"GOLD.i#","timeframe":"M15","duration_seconds":30591,"interval_seconds":5,"risk_percent":0.25,"risk_reward":0.8,"max_positions":2,"forming_candle_enabled":true,"magic":1302015914}
+{"event":"DOUBLE_TOP_HEARTBEAT","timestamp":"2026-09-07T12:30:10.680412+00:00","current_bar_time":1788795000,"direction":null,"reasons":["second_peak_stale"],"strategy_positions":0,"all_positions":0}

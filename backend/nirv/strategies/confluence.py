@@ -13,14 +13,19 @@ def evaluate_confluence(
 ) -> ConfluenceDecision:
     if news_blocked:
         return ConfluenceDecision(None, ["news_blackout"], 0)
-    direction = (
-        "BUY"
-        if sweep == "sell_side" and mss == "bullish" and fvg == "bullish" and volume_confirmed
-        else "SELL"
-        if sweep == "buy_side" and mss == "bearish" and fvg == "bearish" and volume_confirmed
-        else None
-    )
-    confluences = []
-    if direction:
-        confluences = [f"{sweep}_sweep", f"{mss}_mss", f"{fvg}_fvg", "volume_confirmation"]
-    return ConfluenceDecision(direction, confluences, len(confluences))
+    signals: list[tuple[str, str]] = []
+    if sweep in {"sell_side", "buy_side"}:
+        signals.append(("BUY" if sweep == "sell_side" else "SELL", f"{sweep}_sweep"))
+    if mss in {"bullish", "bearish"}:
+        signals.append(("BUY" if mss == "bullish" else "SELL", f"{mss}_mss"))
+    if fvg in {"bullish", "bearish"}:
+        signals.append(("BUY" if fvg == "bullish" else "SELL", f"{fvg}_fvg"))
+
+    directions = {direction for direction, _ in signals}
+    if len(directions) != 1:
+        return ConfluenceDecision(None, [], 0)
+
+    confluences = [name for _, name in signals]
+    if volume_confirmed:
+        confluences.append("volume_confirmation")
+    return ConfluenceDecision(next(iter(directions)), confluences, len(confluences))

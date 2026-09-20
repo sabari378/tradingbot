@@ -23,6 +23,8 @@ def calculate_position_size(
         raise ValueError("zero stop distance")
     risk_amount = balance * risk_percent / 100
     raw_volume = risk_amount / (distance * specification.contract_size)
+    if raw_volume < specification.min_volume:
+        raise ValueError("requested risk is below the broker minimum volume")
     steps = int(raw_volume / specification.volume_step)
-    volume = max(specification.min_volume, steps * specification.volume_step)
+    volume = steps * specification.volume_step
     return PositionSize(volume=round(volume, 2), risk_amount=round(risk_amount, 2))

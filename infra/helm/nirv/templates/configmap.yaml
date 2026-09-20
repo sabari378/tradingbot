@@ -2,5 +2,10 @@ apiVersion: v1
 kind: ConfigMap
 metadata: { name: nirv-config }
 data:
-  NIRV_MODE: PAPER
+  APP_ENV: production
+  NIRV_MODE: {{ .Values.backend.mode | quote }}
   DEFAULT_SYMBOL: XAUUSD
+  DATA_DIR: {{ .Values.backend.dataDir | quote }}
+  MT5_GATEWAY_URL: {{ .Values.backend.mt5GatewayUrl | quote }}
+  DEMO_TRADING_ENABLED: {{ .Values.backend.demoTradingEnabled | quote }}
+  CORS_ORIGINS: {{ .Values.backend.corsOrigins | quote }}

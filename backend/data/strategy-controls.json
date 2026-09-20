@@ -1,0 +1,1 @@
+{"sma_crossover": true, "donchian_breakout": true, "bollinger_reversion": true, "rsi_countertrend": true, "volatility_breakout": true, "engulfing_reversal": true, "market_structure": true, "liquidity_sweep": true, "fair_value_gap": true, "double_top": true}

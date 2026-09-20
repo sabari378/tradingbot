@@ -2,6 +2,7 @@ PYTHON ?= python3
 
 install:
 	$(PYTHON) -m pip install -r backend/requirements.txt
+	cd frontend && npm ci
 
 test:
 	$(PYTHON) -m pytest backend/tests
@@ -18,10 +19,16 @@ frontend:
 	cd frontend && npm run dev
 
 docker-up:
-	docker compose up --build
+	docker compose up --build -d
 
 docker-down:
 	docker compose down
 
 migrate:
 	alembic -c backend/alembic.ini upgrade head
+
+helm-lint:
+	helm lint infra/helm/nirv
+
+helm-render:
+	helm template nirv infra/helm/nirv

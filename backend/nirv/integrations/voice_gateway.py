@@ -3,6 +3,8 @@ from enum import StrEnum
 
 
 class VoiceIntent(StrEnum):
+    START_PAPER = "START_PAPER"
+    START_DEMO = "START_DEMO"
     ANALYZE = "ANALYZE"
     STATUS = "STATUS"
     POSITIONS = "POSITIONS"
@@ -15,6 +17,10 @@ class VoiceIntent(StrEnum):
 
 def parse_voice_intent(text: str) -> tuple[VoiceIntent, str | None]:
     normalized = text.lower().strip()
+    if re.search(r"\b(start|run|begin)\s+(demo(?:\s+trading)?|demo account)\b", normalized):
+        return VoiceIntent.START_DEMO, None
+    if re.search(r"\b(start|run|begin)\s+(pt|paper(?:\s+trading)?|paper session)\b", normalized):
+        return VoiceIntent.START_PAPER, None
     if "analyze" in normalized or "bias" in normalized:
         return VoiceIntent.ANALYZE, None
     if "position" in normalized:
