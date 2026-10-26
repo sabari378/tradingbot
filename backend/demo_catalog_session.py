@@ -8,6 +8,8 @@ from pathlib import Path
 
 import httpx
 
+from nirv.strategies.adaptive_exits import POLICY, exit_target, manage_exits, round_target, valid_levels
+from nirv.strategies.session_guards import check_overlap, check_target_reward, entry_budget
 from nirv.services.strategy_controls import strategy_enabled
 from nirv.strategies.market_structure import fresh_bos_context
 from nirv.market.candles import Candle
@@ -85,10 +87,17 @@ def run(args, mt5):
     journals = {s: folder / (s + '-demo.jsonl') for s in CATALOG_STRATEGIES}
     seen = {s: seen_signals(p) for s, p in journals.items()}
     halt_file = folder / 'orders-halted.txt'
+    guarded = getattr(args, 'guarded', False)
+    policy = 'adaptive_v2_guarded' if guarded else POLICY
+    risk_file = folder / 'risk-state.json'
+    risk_halt = folder / 'risk-entries-halted.txt'
+    risk_state = json.loads(risk_file.read_text()) if guarded and risk_file.exists() else None
     for s, path in journals.items():
         emit(path, 'CATALOG_STARTED', strategy=s, symbol=args.symbol, timeframes=TIMEFRAMES,
              end_at=end.isoformat(), risk_dollars=args.risk_dollars, total_risk_dollars=args.total_risk_dollars,
-             risk_reward=2, max_positions=None, variant=getattr(args, 'variant', 'pluto'))
+             risk_reward=None if getattr(args, 'adaptive_exits', False) else 2,
+             exit_policy=policy if getattr(args, 'adaptive_exits', False) else 'fixed_2R',
+             max_positions=None, variant=getattr(args, 'variant', 'pluto'))
     known = {}
     for path in journals.values():
         for line in path.read_text().splitlines():
@@ -108,6 +117,19 @@ def run(args, mt5):
                 if not mt5.initialize(timeout=5000):
                     raise ValueError('MT5_initialize_failed')
                 account = check_account(mt5)
+                if guarded:
+                    if risk_state is None:
+                        risk_state = dict(start_equity=account.equity, account_login=account.login,
+                                          account_server=account.server, policy=policy,
+                                          started_at=datetime.now(timezone.utc).isoformat())
+                        temp = risk_file.with_suffix('.tmp')
+                        temp.write_text(json.dumps(risk_state, indent=2))
+                        temp.replace(risk_file)
+                    if account.login != risk_state['account_login'] or account.server != risk_state['account_server']:
+                        raise ValueError('guard_account_changed')
+                    if account.equity <= risk_state['start_equity'] * .99 and not risk_halt.exists():
+                        risk_halt.write_text('1% session equity loss reached; entries paused until operator review.')
+                        emit(supervisor, 'RISK_ENTRIES_HALTED', equity=account.equity, **risk_state)
                 positions = mt5.positions_get()
                 if positions is None:
                     raise ValueError('positions_unavailable')
@@ -123,8 +145,20 @@ def run(args, mt5):
                 info = mt5.symbol_info(args.symbol)
                 if not info or not info.visible:
                     raise ValueError('symbol_unavailable')
+                if getattr(args, 'adaptive_exits', False) and not halt_file.exists():
+                    def authorize_exit():
+                        exit_account = check_account(mt5)
+                        if guarded and (exit_account.login != risk_state['account_login'] or
+                                        exit_account.server != risk_state['account_server']):
+                            raise ValueError('guard_account_changed')
+                        control = client.get(args.backend + '/api/v1/controls/emergency-stop')
+                        control.raise_for_status()
+                        return not control.json().get('active') and time.time() < end_timestamp
+                    manage_exits(mt5, journals, args.symbol, emit, authorize_exit,
+                                 policy=policy, protect_profit=guarded)
                 emit(supervisor, 'HEARTBEAT', equity=account.equity, positions=len(positions),
-                     open_risk=open_risk(mt5, positions), orders_halted=halt_file.exists())
+                     open_risk=open_risk(mt5, positions), orders_halted=halt_file.exists(),
+                     entries_risk_halted=risk_halt.exists(), exit_policy=policy if guarded else None)
                 for tf_index, tf in enumerate(TIMEFRAMES):
                     bars = mt5.copy_rates_from_pos(args.symbol, getattr(mt5, 'TIMEFRAME_' + tf), 1, 200)
                     if bars is None or len(bars) < 51:
@@ -147,7 +181,7 @@ def run(args, mt5):
                         direction = decision.confluence.direction
                         emit(path, 'SCAN', timeframe=tf, direction=direction, baseline_direction=baseline_direction, confluences=decision.confluence.confluences,
                              structure_context=fresh_bos_context(candles) if fresh else None)
-                        if not direction or halt_file.exists() or not strategy_enabled(strategy):
+                        if not direction or halt_file.exists() or risk_halt.exists() or not strategy_enabled(strategy):
                             continue
                         try:
                             account = check_account(mt5)
@@ -165,6 +199,11 @@ def run(args, mt5):
                             if args.total_risk_dollars:
                                 budget = min(budget, args.total_risk_dollars - open_risk(mt5, positions))
                             side = mt5.ORDER_TYPE_BUY if direction == 'BUY' else mt5.ORDER_TYPE_SELL
+                            magic = MAGIC_BASE+index*10+tf_index
+                            if guarded:
+                                check_overlap(positions, strategy, args.symbol, side, magic)
+                                budget = min(budget, entry_budget(mt5, positions, account.equity,
+                                                                 risk_state['start_equity']))
                             entry = tick.ask if direction == 'BUY' else tick.bid
                             raw_stop = float(decision.stop_loss)
                             # Broker candles use Bid; a short exits at Ask.
@@ -177,10 +216,20 @@ def run(args, mt5):
                             if distance <= 0:
                                 raise ValueError('invalid_stop_side')
                             target = round(round((entry + (2*distance if direction == 'BUY' else -2*distance))/step)*step, info.digits)
+                            exit_rule = 'fixed_2R'
+                            if getattr(args, 'adaptive_exits', False):
+                                target, exit_rule = exit_target(strategy, candles, direction, entry)
+                                target = round_target(target, info)
+                                if target and (target <= entry if direction == 'BUY' else target >= entry):
+                                    raise ValueError('adaptive_exit_rounded_target_not_profitable')
+                                if not valid_levels(direction, stop, target, tick, info):
+                                    raise ValueError('adaptive_exit_invalid_broker_distance')
+                            if guarded:
+                                check_target_reward(direction, entry, stop, target)
                             volume, risk = select_volume(mt5, args.symbol, side, entry, stop, info, budget)
                             request = dict(action=mt5.TRADE_ACTION_DEAL, symbol=args.symbol, type=side,
                                            volume=volume, price=entry, sl=stop, tp=target, deviation=20,
-                                           magic=MAGIC_BASE+index*10+tf_index, comment=f'catalog:{index}:{tf}',
+                                           magic=magic, comment=f'catalog:{index}:{tf}',
                                            type_time=mt5.ORDER_TIME_GTC, type_filling=mt5.ORDER_FILLING_IOC)
                             checked = mt5.order_check(request)
                             if checked is None or checked.retcode != 0:
@@ -189,7 +238,19 @@ def run(args, mt5):
                             control.raise_for_status()
                             if control.json().get('active') or time.time() >= end_timestamp or not strategy_enabled(strategy):
                                 continue
-                            emit(path, 'ORDER_INTENT', signal_key=key, timeframe=tf, request=request, planned_risk=risk)
+                            if guarded:
+                                latest = check_account(mt5)
+                                if latest.login != risk_state['account_login'] or latest.server != risk_state['account_server']:
+                                    raise ValueError('guard_account_changed')
+                                latest_positions = mt5.positions_get()
+                                if latest_positions is None:
+                                    raise ValueError('positions_unavailable')
+                                check_overlap(latest_positions, strategy, args.symbol, side, magic)
+                                if risk > entry_budget(mt5, latest_positions, latest.equity,
+                                                       risk_state['start_equity']) + 1e-8:
+                                    raise ValueError('guard_risk_changed_before_order')
+                            emit(path, 'ORDER_INTENT', signal_key=key, timeframe=tf, request=request, planned_risk=risk,
+                                 exit_policy=policy if getattr(args, 'adaptive_exits', False) else 'fixed_2R', exit_rule=exit_rule)
                             result = mt5.order_send(request)
                             if result is None or result.retcode in (mt5.TRADE_RETCODE_TIMEOUT, mt5.TRADE_RETCODE_CONNECTION):
                                 halt_file.write_text('Uncertain order result; reconcile broker history before resuming orders.')
@@ -200,7 +261,7 @@ def run(args, mt5):
                             ticket = int(result.order)
                             emit(path, 'FILLED', timeframe=tf, ticket=ticket, direction=direction, entry=result.price,
                                  stop_loss=stop, take_profit=target, volume=result.volume, planned_risk=risk,
-                                 magic=request['magic'])
+                                 magic=request['magic'], exit_policy=policy if getattr(args, 'adaptive_exits', False) else 'fixed_2R')
                             known[ticket] = (path, risk)
                         except (ValueError, httpx.HTTPError) as error:
                             emit(path, 'REJECTED', timeframe=tf, reason=str(error))
@@ -217,6 +278,8 @@ def run(args, mt5):
 def parse_args():
     parser = argparse.ArgumentParser()
     parser.add_argument('--variant', choices=('pluto', 'pluto3', 'pluto4'), default='pluto')
+    parser.add_argument('--adaptive-exits', action='store_true')
+    parser.add_argument('--guarded', action='store_true')
     parser.add_argument('--end-at', required=True)
     parser.add_argument('--output-dir', required=True)
     parser.add_argument('--symbol', default='GOLD.i#')
@@ -226,6 +289,8 @@ def parse_args():
     parser.add_argument('--interval', type=float, default=30)
     parser.add_argument('--backend', default='http://127.0.0.1:8000')
     args = parser.parse_args()
+    if args.guarded and not args.adaptive_exits:
+        parser.error('--guarded requires --adaptive-exits')
     if min(args.risk_dollars, args.total_risk_dollars) < 0 or min(args.interval, args.max_spread) <= 0:
         parser.error('risk caps must be nonnegative; spread and interval must be positive')
     return args

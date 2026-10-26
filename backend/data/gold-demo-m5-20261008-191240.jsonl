@@ -1,0 +1,4 @@
+{"event":"DEMO_SESSION_STARTED","started_at":"2026-10-08T19:12:41.227672+00:00","symbol":"GOLD.i#","mode":"DEMO","volume":0.05}
+{"event":"DEMO_SCAN","timestamp":"2026-10-08T19:12:41.588255+00:00","symbol":"GOLD.i#","price_action_vote":null,"imbalance_vote":null,"aligned":false,"position_open":false,"bid":4129.56,"ask":4129.82}
+{"event":"DEMO_SCAN","timestamp":"2026-10-08T19:13:41.651106+00:00","symbol":"GOLD.i#","price_action_vote":null,"imbalance_vote":null,"aligned":false,"position_open":false,"bid":4129.78,"ask":4130.04}
+{"event":"DEMO_SCAN","timestamp":"2026-10-08T19:14:41.691311+00:00","symbol":"GOLD.i#","price_action_vote":null,"imbalance_vote":null,"aligned":false,"position_open":false,"bid":4130.43,"ask":4130.68}

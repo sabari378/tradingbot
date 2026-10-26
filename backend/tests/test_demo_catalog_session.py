@@ -36,14 +36,15 @@ def test_non_demo_account_rejected(mode):
         runner.check_account(broker)
 
 
+@pytest.mark.parametrize("guarded", [False, True])
 @pytest.mark.parametrize("variant", ["pluto", "pluto3", "pluto4"])
 @pytest.mark.parametrize("disabled", [None, "market_structure"])
-def test_ten_sessions_three_timeframes_deduplicate_and_stop(tmp_path, monkeypatch, disabled, variant):
+def test_ten_sessions_three_timeframes_deduplicate_and_stop(tmp_path, monkeypatch, disabled, variant, guarded):
     monkeypatch.setattr(runner, "strategy_enabled", lambda strategy: strategy != disabled)
     clock = [1000.0]
     orders = []
     timeframe_calls = []
-    info = NS(visible=True, volume_min=.01, volume_max=50, volume_step=.01, trade_tick_size=.01, digits=2)
+    info = NS(visible=True, volume_min=.01, volume_max=50, volume_step=.01, trade_tick_size=.01, digits=2, trade_stops_level=0, trade_freeze_level=0, point=.01)
     class Broker:
         ACCOUNT_TRADE_MODE_DEMO=1
         ACCOUNT_MARGIN_MODE_RETAIL_HEDGING=2
@@ -54,9 +55,9 @@ def test_ten_sessions_three_timeframes_deduplicate_and_stop(tmp_path, monkeypatc
         TRADE_RETCODE_DONE=12; TRADE_RETCODE_DONE_PARTIAL=13
         def initialize(self, **kwargs): return True
         def shutdown(self): pass
-        def account_info(self): return NS(trade_mode=1, currency='USD', margin_mode=2, trade_allowed=True, trade_expert=True, equity=10000)
+        def account_info(self): return NS(trade_mode=1, currency='USD', margin_mode=2, trade_allowed=True, trade_expert=True, equity=10000, login=1, server="test")
         def terminal_info(self): return NS(connected=True, trade_allowed=True, tradeapi_disabled=False)
-        def positions_get(self): return [NS(ticket=n+1, sl=o['sl'], type=o['type'], symbol=o['symbol'], volume=o['volume'], price_open=o['price']) for n,o in enumerate(orders)]
+        def positions_get(self): return [NS(ticket=n+1, sl=o['sl'], type=o['type'], symbol=o['symbol'], volume=o['volume'], price_open=o['price'], price_current=o['price'], magic=o['magic']) for n,o in enumerate(orders)]
         def symbol_info(self, symbol): return info
         def symbol_info_tick(self, symbol): return NS(ask=100, bid=99.8)
         def copy_rates_from_pos(self, symbol, tf, start, count):
@@ -78,6 +79,8 @@ def test_ten_sessions_three_timeframes_deduplicate_and_stop(tmp_path, monkeypatc
     monkeypatch.setattr(runner.httpx, 'Client', Client)
     monkeypatch.setattr(runner.time, 'time', lambda:clock[0])
     monkeypatch.setattr(runner.time, 'sleep', lambda seconds:clock.__setitem__(0, clock[0]+seconds))
+    monkeypatch.setattr(runner, 'exit_target', lambda *args: (110, 'test'))
+    monkeypatch.setattr(runner, 'manage_exits', lambda *args, **kwargs: None)
     strategies=[]
     def evaluate(strategy, candles, **kwargs):
         assert kwargs["fresh_structure"] == (variant in ("pluto3", "pluto4") and strategy == "market_structure")
@@ -86,10 +89,16 @@ def test_ten_sessions_three_timeframes_deduplicate_and_stop(tmp_path, monkeypatc
     monkeypatch.setattr(runner, 'evaluate_catalog_strategy', evaluate)
     monkeypatch.setattr(runner, 'evaluate_pluto4_strategy', lambda strategy, candles, **kwargs: NS(confluence=NS(direction='BUY', confluences=['test']), stop_loss=95))
     args=NS(end_at=datetime.fromtimestamp(1060, timezone.utc).isoformat(), output_dir=str(tmp_path),
-            variant=variant, symbol='GOLD', risk_dollars=0, total_risk_dollars=0, backend='http://test', interval=30, max_spread=.5)
+            guarded=guarded, adaptive_exits=guarded, variant=variant, symbol='GOLD', risk_dollars=0, total_risk_dollars=0, backend='http://test', interval=30, max_spread=.5)
     runner.run(args, Broker())
-    assert len(orders) == (27 if disabled else 30)
-    assert len({o['magic'] for o in orders}) == (27 if disabled else 30)
+    expected = 4 if guarded else (27 if disabled else 30)
+    assert len(orders) == expected
+    assert len({o['magic'] for o in orders}) == expected
+    if guarded:
+        assert (tmp_path/'risk-state.json').exists()
+        assert sum(abs(o['price']-o['sl'])*100*o['volume'] for o in orders) <= 100
+        assert sum(1 for o in orders if runner.CATALOG_STRATEGIES[(o['magic']-runner.MAGIC_BASE)//10]
+                   in ('sma_crossover','donchian_breakout','volatility_breakout','market_structure')) == 1
     if disabled:
         assert all(not 1302020060 <= o['magic'] <= 1302020062 for o in orders)
     assert set(strategies) == set(runner.CATALOG_STRATEGIES)

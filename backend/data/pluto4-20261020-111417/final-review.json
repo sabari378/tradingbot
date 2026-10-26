@@ -1,0 +1,227 @@
+{
+  "now": "2026-10-21T02:27:19.479293+00:00",
+  "equity": 9954.24,
+  "positions": 0,
+  "trades": [
+    {
+      "strategy": "bollinger_reversion",
+      "ticket": 1061817104,
+      "tf": "M15",
+      "time": "2026-10-20T13:45:08.835650+00:00",
+      "entry": 4130.36,
+      "initial_sl": 4142.46,
+      "net": -24.36,
+      "r": -1.006611570247934,
+      "exit_reason": 4
+    },
+    {
+      "strategy": "bollinger_reversion",
+      "ticket": 1061878760,
+      "tf": "M15",
+      "time": "2026-10-20T14:15:02.321541+00:00",
+      "entry": 4131.75,
+      "initial_sl": 4145.8,
+      "net": -14.15,
+      "r": -1.0092724679029959,
+      "exit_reason": 4
+    },
+    {
+      "strategy": "bollinger_reversion",
+      "ticket": 1061922199,
+      "tf": "M30",
+      "time": "2026-10-20T14:30:04.230380+00:00",
+      "entry": 4154.02,
+      "initial_sl": 4170.81,
+      "net": 28.06,
+      "r": 1.670238095238095,
+      "exit_reason": 5
+    },
+    {
+      "strategy": "donchian_breakout",
+      "ticket": 1061817102,
+      "tf": "M15",
+      "time": "2026-10-20T13:45:08.739497+00:00",
+      "entry": 4130.61,
+      "initial_sl": 4117.01,
+      "net": 0.63,
+      "r": 0.046086320409656184,
+      "exit_reason": 4
+    },
+    {
+      "strategy": "donchian_breakout",
+      "ticket": 1061922182,
+      "tf": "M15",
+      "time": "2026-10-20T14:30:03.923716+00:00",
+      "entry": 4154.39,
+      "initial_sl": 4136.7,
+      "net": -17.83,
+      "r": -1.0062076749435667,
+      "exit_reason": 4
+    },
+    {
+      "strategy": "donchian_breakout",
+      "ticket": 1061922193,
+      "tf": "M30",
+      "time": "2026-10-20T14:30:04.129238+00:00",
+      "entry": 4154.28,
+      "initial_sl": 4134.78,
+      "net": -19.65,
+      "r": -1.0102827763496143,
+      "exit_reason": 4
+    },
+    {
+      "strategy": "fair_value_gap",
+      "ticket": 1061587409,
+      "tf": "M15",
+      "time": "2026-10-20T11:14:42.980182+00:00",
+      "entry": 4123.8,
+      "initial_sl": 4111.07,
+      "net": 3.13,
+      "r": 0.24587588373919872,
+      "exit_reason": 5
+    },
+    {
+      "strategy": "fair_value_gap",
+      "ticket": 1061595339,
+      "tf": "M30",
+      "time": "2026-10-20T11:30:14.100317+00:00",
+      "entry": 4124.05,
+      "initial_sl": 4110.8,
+      "net": 2.88,
+      "r": 0.21735849056603773,
+      "exit_reason": 5
+    },
+    {
+      "strategy": "fair_value_gap",
+      "ticket": 1061998866,
+      "tf": "M15",
+      "time": "2026-10-20T15:15:03.038208+00:00",
+      "entry": 4134.99,
+      "initial_sl": 4156.73,
+      "net": 16.39,
+      "r": 0.7556477639465191,
+      "exit_reason": 5
+    },
+    {
+      "strategy": "liquidity_sweep",
+      "ticket": 1061587411,
+      "tf": "H1",
+      "time": "2026-10-20T11:14:43.113836+00:00",
+      "entry": 4123.83,
+      "initial_sl": 4110.56,
+      "net": 9.22,
+      "r": 0.6963746223564955,
+      "exit_reason": 5
+    },
+    {
+      "strategy": "market_structure",
+      "ticket": 1061817110,
+      "tf": "M15",
+      "time": "2026-10-20T13:45:09.035409+00:00",
+      "entry": 4130.61,
+      "initial_sl": 4117.01,
+      "net": 0.63,
+      "r": 0.04625550660792952,
+      "exit_reason": 4
+    },
+    {
+      "strategy": "market_structure",
+      "ticket": 1061850779,
+      "tf": "M30",
+      "time": "2026-10-20T14:00:31.162204+00:00",
+      "entry": 4125.42,
+      "initial_sl": 4112.41,
+      "net": 3.33,
+      "r": 0.25595695618754805,
+      "exit_reason": 4
+    },
+    {
+      "strategy": "rsi_countertrend",
+      "ticket": 1061953340,
+      "tf": "M15",
+      "time": "2026-10-20T14:45:05.570883+00:00",
+      "entry": 4147.58,
+      "initial_sl": 4166.38,
+      "net": 23.42,
+      "r": 1.2424403183023873,
+      "exit_reason": 5
+    },
+    {
+      "strategy": "rsi_countertrend",
+      "ticket": 1062194202,
+      "tf": "M15",
+      "time": "2026-10-20T19:00:20.263844+00:00",
+      "entry": 4125.16,
+      "initial_sl": 4117.05,
+      "net": 13.68,
+      "r": 0.56575682382134,
+      "exit_reason": 5
+    },
+    {
+      "strategy": "rsi_countertrend",
+      "ticket": 1062211225,
+      "tf": "M15",
+      "time": "2026-10-20T19:30:25.546126+00:00",
+      "entry": 4122.59,
+      "initial_sl": 4116.2,
+      "net": 15.39,
+      "r": 0.805337519623234,
+      "exit_reason": 5
+    },
+    {
+      "strategy": "sma_crossover",
+      "ticket": 1062043944,
+      "tf": "M15",
+      "time": "2026-10-20T16:00:06.244821+00:00",
+      "entry": 4131.73,
+      "initial_sl": 4114.18,
+      "net": -17.78,
+      "r": -1.0119521912350598,
+      "exit_reason": 4
+    },
+    {
+      "strategy": "sma_crossover",
+      "ticket": 1062237234,
+      "tf": "M15",
+      "time": "2026-10-20T20:30:05.946536+00:00",
+      "entry": 4121.55,
+      "initial_sl": 4126.68,
+      "net": -21.48,
+      "r": -1.0467836257309941,
+      "exit_reason": 4
+    },
+    {
+      "strategy": "volatility_breakout",
+      "ticket": 1061817107,
+      "tf": "M15",
+      "time": "2026-10-20T13:45:08.935934+00:00",
+      "entry": 4130.63,
+      "initial_sl": 4117.01,
+      "net": 0.61,
+      "r": 0.04485294117647059,
+      "exit_reason": 4
+    },
+    {
+      "strategy": "volatility_breakout",
+      "ticket": 1061922186,
+      "tf": "M15",
+      "time": "2026-10-20T14:30:04.026285+00:00",
+      "entry": 4154.23,
+      "initial_sl": 4136.7,
+      "net": -17.67,
+      "r": -0.9988694177501414,
+      "exit_reason": 4
+    },
+    {
+      "strategy": "volatility_breakout",
+      "ticket": 1061922211,
+      "tf": "M30",
+      "time": "2026-10-20T14:30:04.330701+00:00",
+      "entry": 4154.37,
+      "initial_sl": 4134.78,
+      "net": -19.74,
+      "r": -1.012827090815803,
+      "exit_reason": 4
+    }
+  ]
+}

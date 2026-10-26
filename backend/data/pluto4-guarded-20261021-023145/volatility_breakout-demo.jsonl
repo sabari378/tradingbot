@@ -1,0 +1,175 @@
+{"event": "CATALOG_STARTED", "timestamp": "2026-10-21T02:31:46.342048+00:00", "strategy": "volatility_breakout", "symbol": "GOLD.i#", "timeframes": ["M15", "M30", "H1"], "end_at": "2026-10-21T17:00:00-04:00", "risk_dollars": 0, "total_risk_dollars": 0, "risk_reward": null, "exit_policy": "adaptive_v2_guarded", "max_positions": null, "variant": "pluto4"}
+{"event": "SIGNAL_CONSUMED", "timestamp": "2026-10-21T02:31:46.694132+00:00", "signal_key": "M15:1792559700", "timeframe": "M15"}
+{"event": "SCAN", "timestamp": "2026-10-21T02:31:46.694347+00:00", "timeframe": "M15", "direction": null, "baseline_direction": null, "confluences": [], "structure_context": null}
+{"event": "SIGNAL_CONSUMED", "timestamp": "2026-10-21T02:31:46.699499+00:00", "signal_key": "M30:1792558800", "timeframe": "M30"}
+{"event": "SCAN", "timestamp": "2026-10-21T02:31:46.699752+00:00", "timeframe": "M30", "direction": null, "baseline_direction": null, "confluences": [], "structure_context": null}
+{"event": "SIGNAL_CONSUMED", "timestamp": "2026-10-21T02:31:46.829436+00:00", "signal_key": "H1:1792555200", "timeframe": "H1"}
+{"event": "SCAN", "timestamp": "2026-10-21T02:31:46.829627+00:00", "timeframe": "H1", "direction": null, "baseline_direction": null, "confluences": [], "structure_context": null}
+{"event": "SIGNAL_CONSUMED", "timestamp": "2026-10-21T02:45:17.712971+00:00", "signal_key": "M15:1792560600", "timeframe": "M15"}
+{"event": "SCAN", "timestamp": "2026-10-21T02:45:17.713110+00:00", "timeframe": "M15", "direction": null, "baseline_direction": null, "confluences": [], "structure_context": null}
+{"event": "SIGNAL_CONSUMED", "timestamp": "2026-10-21T03:00:18.658572+00:00", "signal_key": "M15:1792561500", "timeframe": "M15"}
+{"event": "SCAN", "timestamp": "2026-10-21T03:00:18.658833+00:00", "timeframe": "M15", "direction": null, "baseline_direction": null, "confluences": [], "structure_context": null}
+{"event": "SIGNAL_CONSUMED", "timestamp": "2026-10-21T03:00:18.663040+00:00", "signal_key": "M30:1792560600", "timeframe": "M30"}
+{"event": "SCAN", "timestamp": "2026-10-21T03:00:18.663172+00:00", "timeframe": "M30", "direction": null, "baseline_direction": null, "confluences": [], "structure_context": null}
+{"event": "SIGNAL_CONSUMED", "timestamp": "2026-10-21T03:00:18.666590+00:00", "signal_key": "H1:1792558800", "timeframe": "H1"}
+{"event": "SCAN", "timestamp": "2026-10-21T03:00:18.666714+00:00", "timeframe": "H1", "direction": null, "baseline_direction": null, "confluences": [], "structure_context": null}
+{"event": "SIGNAL_CONSUMED", "timestamp": "2026-10-21T03:15:19.620140+00:00", "signal_key": "M15:1792562400", "timeframe": "M15"}
+{"event": "SCAN", "timestamp": "2026-10-21T03:15:19.620362+00:00", "timeframe": "M15", "direction": null, "baseline_direction": null, "confluences": [], "structure_context": null}
+{"event": "SIGNAL_CONSUMED", "timestamp": "2026-10-21T03:30:20.579862+00:00", "signal_key": "M15:1792563300", "timeframe": "M15"}
+{"event": "SCAN", "timestamp": "2026-10-21T03:30:20.580066+00:00", "timeframe": "M15", "direction": null, "baseline_direction": null, "confluences": [], "structure_context": null}
+{"event": "SIGNAL_CONSUMED", "timestamp": "2026-10-21T03:30:20.584440+00:00", "signal_key": "M30:1792562400", "timeframe": "M30"}
+{"event": "SCAN", "timestamp": "2026-10-21T03:30:20.584545+00:00", "timeframe": "M30", "direction": null, "baseline_direction": null, "confluences": [], "structure_context": null}
+{"event": "SIGNAL_CONSUMED", "timestamp": "2026-10-21T03:45:21.467619+00:00", "signal_key": "M15:1792564200", "timeframe": "M15"}
+{"event": "SCAN", "timestamp": "2026-10-21T03:45:21.467889+00:00", "timeframe": "M15", "direction": null, "baseline_direction": null, "confluences": [], "structure_context": null}
+{"event": "SIGNAL_CONSUMED", "timestamp": "2026-10-21T04:00:22.432093+00:00", "signal_key": "M15:1792565100", "timeframe": "M15"}
+{"event": "SCAN", "timestamp": "2026-10-21T04:00:22.432287+00:00", "timeframe": "M15", "direction": null, "baseline_direction": null, "confluences": [], "structure_context": null}
+{"event": "SIGNAL_CONSUMED", "timestamp": "2026-10-21T04:00:22.438924+00:00", "signal_key": "M30:1792564200", "timeframe": "M30"}
+{"event": "SCAN", "timestamp": "2026-10-21T04:00:22.439089+00:00", "timeframe": "M30", "direction": null, "baseline_direction": null, "confluences": [], "structure_context": null}
+{"event": "SIGNAL_CONSUMED", "timestamp": "2026-10-21T04:00:22.442703+00:00", "signal_key": "H1:1792562400", "timeframe": "H1"}
+{"event": "SCAN", "timestamp": "2026-10-21T04:00:22.442810+00:00", "timeframe": "H1", "direction": null, "baseline_direction": null, "confluences": [], "structure_context": null}
+{"event": "SIGNAL_CONSUMED", "timestamp": "2026-10-21T04:15:23.417225+00:00", "signal_key": "M15:1792566000", "timeframe": "M15"}
+{"event": "SCAN", "timestamp": "2026-10-21T04:15:23.417451+00:00", "timeframe": "M15", "direction": null, "baseline_direction": null, "confluences": [], "structure_context": null}
+{"event": "SIGNAL_CONSUMED", "timestamp": "2026-10-21T04:30:24.435630+00:00", "signal_key": "M15:1792566900", "timeframe": "M15"}
+{"event": "SCAN", "timestamp": "2026-10-21T04:30:24.436040+00:00", "timeframe": "M15", "direction": null, "baseline_direction": null, "confluences": [], "structure_context": null}
+{"event": "SIGNAL_CONSUMED", "timestamp": "2026-10-21T04:30:24.442216+00:00", "signal_key": "M30:1792566000", "timeframe": "M30"}
+{"event": "SCAN", "timestamp": "2026-10-21T04:30:24.442316+00:00", "timeframe": "M30", "direction": null, "baseline_direction": null, "confluences": [], "structure_context": null}
+{"event": "SIGNAL_CONSUMED", "timestamp": "2026-10-21T04:45:25.493564+00:00", "signal_key": "M15:1792567800", "timeframe": "M15"}
+{"event": "SCAN", "timestamp": "2026-10-21T04:45:25.493736+00:00", "timeframe": "M15", "direction": null, "baseline_direction": null, "confluences": [], "structure_context": null}
+{"event": "SIGNAL_CONSUMED", "timestamp": "2026-10-21T05:00:26.483858+00:00", "signal_key": "M15:1792568700", "timeframe": "M15"}
+{"event": "SCAN", "timestamp": "2026-10-21T05:00:26.484081+00:00", "timeframe": "M15", "direction": null, "baseline_direction": null, "confluences": [], "structure_context": null}
+{"event": "SIGNAL_CONSUMED", "timestamp": "2026-10-21T05:00:26.488678+00:00", "signal_key": "M30:1792567800", "timeframe": "M30"}
+{"event": "SCAN", "timestamp": "2026-10-21T05:00:26.488784+00:00", "timeframe": "M30", "direction": null, "baseline_direction": null, "confluences": [], "structure_context": null}
+{"event": "SIGNAL_CONSUMED", "timestamp": "2026-10-21T05:00:26.492668+00:00", "signal_key": "H1:1792566000", "timeframe": "H1"}
+{"event": "SCAN", "timestamp": "2026-10-21T05:00:26.492789+00:00", "timeframe": "H1", "direction": null, "baseline_direction": null, "confluences": [], "structure_context": null}
+{"event": "SIGNAL_CONSUMED", "timestamp": "2026-10-21T05:15:27.400662+00:00", "signal_key": "M15:1792569600", "timeframe": "M15"}
+{"event": "SCAN", "timestamp": "2026-10-21T05:15:27.400847+00:00", "timeframe": "M15", "direction": null, "baseline_direction": null, "confluences": [], "structure_context": null}
+{"event": "SIGNAL_CONSUMED", "timestamp": "2026-10-21T05:30:28.618961+00:00", "signal_key": "M15:1792570500", "timeframe": "M15"}
+{"event": "SCAN", "timestamp": "2026-10-21T05:30:28.619283+00:00", "timeframe": "M15", "direction": "BUY", "baseline_direction": "BUY", "confluences": ["volatility_breakout"], "structure_context": null}
+{"event": "REJECTED", "timestamp": "2026-10-21T05:30:28.620664+00:00", "timeframe": "M15", "reason": "guard_overlapping_trend_direction"}
+{"event": "SIGNAL_CONSUMED", "timestamp": "2026-10-21T05:30:28.627742+00:00", "signal_key": "M30:1792569600", "timeframe": "M30"}
+{"event": "SCAN", "timestamp": "2026-10-21T05:30:28.627874+00:00", "timeframe": "M30", "direction": null, "baseline_direction": null, "confluences": [], "structure_context": null}
+{"event": "SIGNAL_CONSUMED", "timestamp": "2026-10-21T05:45:29.614511+00:00", "signal_key": "M15:1792571400", "timeframe": "M15"}
+{"event": "SCAN", "timestamp": "2026-10-21T05:45:29.614644+00:00", "timeframe": "M15", "direction": null, "baseline_direction": null, "confluences": [], "structure_context": null}
+{"event": "SIGNAL_CONSUMED", "timestamp": "2026-10-21T06:00:00.525199+00:00", "signal_key": "M15:1792572300", "timeframe": "M15"}
+{"event": "SCAN", "timestamp": "2026-10-21T06:00:00.525334+00:00", "timeframe": "M15", "direction": null, "baseline_direction": null, "confluences": [], "structure_context": null}
+{"event": "SIGNAL_CONSUMED", "timestamp": "2026-10-21T06:00:00.531073+00:00", "signal_key": "M30:1792571400", "timeframe": "M30"}
+{"event": "SCAN", "timestamp": "2026-10-21T06:00:00.531233+00:00", "timeframe": "M30", "direction": null, "baseline_direction": null, "confluences": [], "structure_context": null}
+{"event": "SIGNAL_CONSUMED", "timestamp": "2026-10-21T06:00:00.535746+00:00", "signal_key": "H1:1792569600", "timeframe": "H1"}
+{"event": "SCAN", "timestamp": "2026-10-21T06:00:00.535859+00:00", "timeframe": "H1", "direction": null, "baseline_direction": null, "confluences": [], "structure_context": null}
+{"event": "SIGNAL_CONSUMED", "timestamp": "2026-10-21T06:15:01.692421+00:00", "signal_key": "M15:1792573200", "timeframe": "M15"}
+{"event": "SCAN", "timestamp": "2026-10-21T06:15:01.692589+00:00", "timeframe": "M15", "direction": null, "baseline_direction": null, "confluences": [], "structure_context": null}
+{"event": "SIGNAL_CONSUMED", "timestamp": "2026-10-21T06:30:02.556446+00:00", "signal_key": "M15:1792574100", "timeframe": "M15"}
+{"event": "SCAN", "timestamp": "2026-10-21T06:30:02.556585+00:00", "timeframe": "M15", "direction": null, "baseline_direction": null, "confluences": [], "structure_context": null}
+{"event": "SIGNAL_CONSUMED", "timestamp": "2026-10-21T06:30:02.560769+00:00", "signal_key": "M30:1792573200", "timeframe": "M30"}
+{"event": "SCAN", "timestamp": "2026-10-21T06:30:02.560946+00:00", "timeframe": "M30", "direction": null, "baseline_direction": null, "confluences": [], "structure_context": null}
+{"event": "SIGNAL_CONSUMED", "timestamp": "2026-10-21T06:45:03.466602+00:00", "signal_key": "M15:1792575000", "timeframe": "M15"}
+{"event": "SCAN", "timestamp": "2026-10-21T06:45:03.466745+00:00", "timeframe": "M15", "direction": null, "baseline_direction": null, "confluences": [], "structure_context": null}
+{"event": "SIGNAL_CONSUMED", "timestamp": "2026-10-21T07:00:04.510377+00:00", "signal_key": "M15:1792575900", "timeframe": "M15"}
+{"event": "SCAN", "timestamp": "2026-10-21T07:00:04.510661+00:00", "timeframe": "M15", "direction": null, "baseline_direction": null, "confluences": [], "structure_context": null}
+{"event": "SIGNAL_CONSUMED", "timestamp": "2026-10-21T07:00:04.517183+00:00", "signal_key": "M30:1792575000", "timeframe": "M30"}
+{"event": "SCAN", "timestamp": "2026-10-21T07:00:04.517309+00:00", "timeframe": "M30", "direction": null, "baseline_direction": null, "confluences": [], "structure_context": null}
+{"event": "SIGNAL_CONSUMED", "timestamp": "2026-10-21T07:00:04.524109+00:00", "signal_key": "H1:1792573200", "timeframe": "H1"}
+{"event": "SCAN", "timestamp": "2026-10-21T07:00:04.524292+00:00", "timeframe": "H1", "direction": null, "baseline_direction": null, "confluences": [], "structure_context": null}
+{"event": "SIGNAL_CONSUMED", "timestamp": "2026-10-21T07:15:05.462475+00:00", "signal_key": "M15:1792576800", "timeframe": "M15"}
+{"event": "SCAN", "timestamp": "2026-10-21T07:15:05.462692+00:00", "timeframe": "M15", "direction": null, "baseline_direction": null, "confluences": [], "structure_context": null}
+{"event": "SIGNAL_CONSUMED", "timestamp": "2026-10-21T07:30:06.434822+00:00", "signal_key": "M15:1792577700", "timeframe": "M15"}
+{"event": "SCAN", "timestamp": "2026-10-21T07:30:06.435018+00:00", "timeframe": "M15", "direction": null, "baseline_direction": null, "confluences": [], "structure_context": null}
+{"event": "SIGNAL_CONSUMED", "timestamp": "2026-10-21T07:30:06.439502+00:00", "signal_key": "M30:1792576800", "timeframe": "M30"}
+{"event": "SCAN", "timestamp": "2026-10-21T07:30:06.439626+00:00", "timeframe": "M30", "direction": null, "baseline_direction": null, "confluences": [], "structure_context": null}
+{"event": "SIGNAL_CONSUMED", "timestamp": "2026-10-21T07:45:07.282957+00:00", "signal_key": "M15:1792578600", "timeframe": "M15"}
+{"event": "SCAN", "timestamp": "2026-10-21T07:45:07.283183+00:00", "timeframe": "M15", "direction": null, "baseline_direction": null, "confluences": [], "structure_context": null}
+{"event": "SIGNAL_CONSUMED", "timestamp": "2026-10-21T08:00:08.234884+00:00", "signal_key": "M15:1792579500", "timeframe": "M15"}
+{"event": "SCAN", "timestamp": "2026-10-21T08:00:08.235195+00:00", "timeframe": "M15", "direction": null, "baseline_direction": null, "confluences": [], "structure_context": null}
+{"event": "SIGNAL_CONSUMED", "timestamp": "2026-10-21T08:00:08.240039+00:00", "signal_key": "M30:1792578600", "timeframe": "M30"}
+{"event": "SCAN", "timestamp": "2026-10-21T08:00:08.240168+00:00", "timeframe": "M30", "direction": null, "baseline_direction": null, "confluences": [], "structure_context": null}
+{"event": "SIGNAL_CONSUMED", "timestamp": "2026-10-21T08:00:08.245271+00:00", "signal_key": "H1:1792576800", "timeframe": "H1"}
+{"event": "SCAN", "timestamp": "2026-10-21T08:00:08.245397+00:00", "timeframe": "H1", "direction": null, "baseline_direction": null, "confluences": [], "structure_context": null}
+{"event": "SIGNAL_CONSUMED", "timestamp": "2026-10-21T08:15:09.204960+00:00", "signal_key": "M15:1792580400", "timeframe": "M15"}
+{"event": "SCAN", "timestamp": "2026-10-21T08:15:09.205111+00:00", "timeframe": "M15", "direction": null, "baseline_direction": null, "confluences": [], "structure_context": null}
+{"event": "SIGNAL_CONSUMED", "timestamp": "2026-10-21T08:30:10.123525+00:00", "signal_key": "M15:1792581300", "timeframe": "M15"}
+{"event": "SCAN", "timestamp": "2026-10-21T08:30:10.123723+00:00", "timeframe": "M15", "direction": null, "baseline_direction": null, "confluences": [], "structure_context": null}
+{"event": "SIGNAL_CONSUMED", "timestamp": "2026-10-21T08:30:10.128212+00:00", "signal_key": "M30:1792580400", "timeframe": "M30"}
+{"event": "SCAN", "timestamp": "2026-10-21T08:30:10.128366+00:00", "timeframe": "M30", "direction": null, "baseline_direction": null, "confluences": [], "structure_context": null}
+{"event": "SIGNAL_CONSUMED", "timestamp": "2026-10-21T08:45:11.073339+00:00", "signal_key": "M15:1792582200", "timeframe": "M15"}
+{"event": "SCAN", "timestamp": "2026-10-21T08:45:11.073472+00:00", "timeframe": "M15", "direction": null, "baseline_direction": null, "confluences": [], "structure_context": null}
+{"event": "SIGNAL_CONSUMED", "timestamp": "2026-10-21T09:00:12.048525+00:00", "signal_key": "M15:1792583100", "timeframe": "M15"}
+{"event": "SCAN", "timestamp": "2026-10-21T09:00:12.048707+00:00", "timeframe": "M15", "direction": null, "baseline_direction": null, "confluences": [], "structure_context": null}
+{"event": "SIGNAL_CONSUMED", "timestamp": "2026-10-21T09:00:12.053078+00:00", "signal_key": "M30:1792582200", "timeframe": "M30"}
+{"event": "SCAN", "timestamp": "2026-10-21T09:00:12.053245+00:00", "timeframe": "M30", "direction": null, "baseline_direction": null, "confluences": [], "structure_context": null}
+{"event": "SIGNAL_CONSUMED", "timestamp": "2026-10-21T09:00:12.057705+00:00", "signal_key": "H1:1792580400", "timeframe": "H1"}
+{"event": "SCAN", "timestamp": "2026-10-21T09:00:12.057881+00:00", "timeframe": "H1", "direction": null, "baseline_direction": null, "confluences": [], "structure_context": null}
+{"event": "SIGNAL_CONSUMED", "timestamp": "2026-10-21T09:15:12.993062+00:00", "signal_key": "M15:1792584000", "timeframe": "M15"}
+{"event": "SCAN", "timestamp": "2026-10-21T09:15:12.993204+00:00", "timeframe": "M15", "direction": null, "baseline_direction": null, "confluences": [], "structure_context": null}
+{"event": "SIGNAL_CONSUMED", "timestamp": "2026-10-21T09:30:14.168428+00:00", "signal_key": "M15:1792584900", "timeframe": "M15"}
+{"event": "SCAN", "timestamp": "2026-10-21T09:30:14.168603+00:00", "timeframe": "M15", "direction": null, "baseline_direction": null, "confluences": [], "structure_context": null}
+{"event": "SIGNAL_CONSUMED", "timestamp": "2026-10-21T09:30:14.174686+00:00", "signal_key": "M30:1792584000", "timeframe": "M30"}
+{"event": "SCAN", "timestamp": "2026-10-21T09:30:14.174839+00:00", "timeframe": "M30", "direction": null, "baseline_direction": null, "confluences": [], "structure_context": null}
+{"event": "SIGNAL_CONSUMED", "timestamp": "2026-10-21T09:45:15.162552+00:00", "signal_key": "M15:1792585800", "timeframe": "M15"}
+{"event": "SCAN", "timestamp": "2026-10-21T09:45:15.162768+00:00", "timeframe": "M15", "direction": null, "baseline_direction": null, "confluences": [], "structure_context": null}
+{"event": "SIGNAL_CONSUMED", "timestamp": "2026-10-21T10:00:16.149432+00:00", "signal_key": "M15:1792586700", "timeframe": "M15"}
+{"event": "SCAN", "timestamp": "2026-10-21T10:00:16.149555+00:00", "timeframe": "M15", "direction": null, "baseline_direction": null, "confluences": [], "structure_context": null}
+{"event": "SIGNAL_CONSUMED", "timestamp": "2026-10-21T10:00:16.155078+00:00", "signal_key": "M30:1792585800", "timeframe": "M30"}
+{"event": "SCAN", "timestamp": "2026-10-21T10:00:16.155272+00:00", "timeframe": "M30", "direction": null, "baseline_direction": null, "confluences": [], "structure_context": null}
+{"event": "SIGNAL_CONSUMED", "timestamp": "2026-10-21T10:00:16.175068+00:00", "signal_key": "H1:1792584000", "timeframe": "H1"}
+{"event": "SCAN", "timestamp": "2026-10-21T10:00:16.175226+00:00", "timeframe": "H1", "direction": null, "baseline_direction": null, "confluences": [], "structure_context": null}
+{"event": "SIGNAL_CONSUMED", "timestamp": "2026-10-21T10:15:17.122756+00:00", "signal_key": "M15:1792587600", "timeframe": "M15"}
+{"event": "SCAN", "timestamp": "2026-10-21T10:15:17.123004+00:00", "timeframe": "M15", "direction": null, "baseline_direction": null, "confluences": [], "structure_context": null}
+{"event": "SIGNAL_CONSUMED", "timestamp": "2026-10-21T10:30:18.226826+00:00", "signal_key": "M15:1792588500", "timeframe": "M15"}
+{"event": "SCAN", "timestamp": "2026-10-21T10:30:18.227049+00:00", "timeframe": "M15", "direction": null, "baseline_direction": null, "confluences": [], "structure_context": null}
+{"event": "SIGNAL_CONSUMED", "timestamp": "2026-10-21T10:30:18.231592+00:00", "signal_key": "M30:1792587600", "timeframe": "M30"}
+{"event": "SCAN", "timestamp": "2026-10-21T10:30:18.231715+00:00", "timeframe": "M30", "direction": null, "baseline_direction": null, "confluences": [], "structure_context": null}
+{"event": "SIGNAL_CONSUMED", "timestamp": "2026-10-21T10:45:19.167992+00:00", "signal_key": "M15:1792589400", "timeframe": "M15"}
+{"event": "SCAN", "timestamp": "2026-10-21T10:45:19.168183+00:00", "timeframe": "M15", "direction": null, "baseline_direction": null, "confluences": [], "structure_context": null}
+{"event": "SIGNAL_CONSUMED", "timestamp": "2026-10-21T11:00:20.201867+00:00", "signal_key": "M15:1792590300", "timeframe": "M15"}
+{"event": "SCAN", "timestamp": "2026-10-21T11:00:20.202016+00:00", "timeframe": "M15", "direction": null, "baseline_direction": null, "confluences": [], "structure_context": null}
+{"event": "SIGNAL_CONSUMED", "timestamp": "2026-10-21T11:00:20.208077+00:00", "signal_key": "M30:1792589400", "timeframe": "M30"}
+{"event": "SCAN", "timestamp": "2026-10-21T11:00:20.208306+00:00", "timeframe": "M30", "direction": null, "baseline_direction": null, "confluences": [], "structure_context": null}
+{"event": "SIGNAL_CONSUMED", "timestamp": "2026-10-21T11:00:20.213402+00:00", "signal_key": "H1:1792587600", "timeframe": "H1"}
+{"event": "SCAN", "timestamp": "2026-10-21T11:00:20.213515+00:00", "timeframe": "H1", "direction": null, "baseline_direction": null, "confluences": [], "structure_context": null}
+{"event": "SIGNAL_CONSUMED", "timestamp": "2026-10-21T11:15:21.260993+00:00", "signal_key": "M15:1792591200", "timeframe": "M15"}
+{"event": "SCAN", "timestamp": "2026-10-21T11:15:21.261109+00:00", "timeframe": "M15", "direction": null, "baseline_direction": null, "confluences": [], "structure_context": null}
+{"event": "SIGNAL_CONSUMED", "timestamp": "2026-10-21T11:30:22.313476+00:00", "signal_key": "M15:1792592100", "timeframe": "M15"}
+{"event": "SCAN", "timestamp": "2026-10-21T11:30:22.313803+00:00", "timeframe": "M15", "direction": null, "baseline_direction": null, "confluences": [], "structure_context": null}
+{"event": "SIGNAL_CONSUMED", "timestamp": "2026-10-21T11:30:22.439616+00:00", "signal_key": "M30:1792591200", "timeframe": "M30"}
+{"event": "SCAN", "timestamp": "2026-10-21T11:30:22.439806+00:00", "timeframe": "M30", "direction": null, "baseline_direction": null, "confluences": [], "structure_context": null}
+{"event": "SIGNAL_CONSUMED", "timestamp": "2026-10-21T11:45:23.581126+00:00", "signal_key": "M15:1792593000", "timeframe": "M15"}
+{"event": "SCAN", "timestamp": "2026-10-21T11:45:23.581316+00:00", "timeframe": "M15", "direction": "BUY", "baseline_direction": "BUY", "confluences": ["volatility_breakout", "volume_confirmation"], "structure_context": null}
+{"event": "REJECTED", "timestamp": "2026-10-21T11:45:23.582275+00:00", "timeframe": "M15", "reason": "guard_overlapping_trend_direction"}
+{"event": "SIGNAL_CONSUMED", "timestamp": "2026-10-21T12:00:24.587049+00:00", "signal_key": "M15:1792593900", "timeframe": "M15"}
+{"event": "SCAN", "timestamp": "2026-10-21T12:00:24.587179+00:00", "timeframe": "M15", "direction": null, "baseline_direction": null, "confluences": [], "structure_context": null}
+{"event": "SIGNAL_CONSUMED", "timestamp": "2026-10-21T12:00:24.593185+00:00", "signal_key": "M30:1792593000", "timeframe": "M30"}
+{"event": "SCAN", "timestamp": "2026-10-21T12:00:24.593303+00:00", "timeframe": "M30", "direction": null, "baseline_direction": null, "confluences": [], "structure_context": null}
+{"event": "SIGNAL_CONSUMED", "timestamp": "2026-10-21T12:00:24.599608+00:00", "signal_key": "H1:1792591200", "timeframe": "H1"}
+{"event": "SCAN", "timestamp": "2026-10-21T12:00:24.599856+00:00", "timeframe": "H1", "direction": null, "baseline_direction": null, "confluences": [], "structure_context": null}
+{"event": "SIGNAL_CONSUMED", "timestamp": "2026-10-21T12:15:25.635588+00:00", "signal_key": "M15:1792594800", "timeframe": "M15"}
+{"event": "SCAN", "timestamp": "2026-10-21T12:15:25.635772+00:00", "timeframe": "M15", "direction": null, "baseline_direction": null, "confluences": [], "structure_context": null}
+{"event": "SIGNAL_CONSUMED", "timestamp": "2026-10-21T12:30:26.765092+00:00", "signal_key": "M15:1792595700", "timeframe": "M15"}
+{"event": "SCAN", "timestamp": "2026-10-21T12:30:26.765422+00:00", "timeframe": "M15", "direction": null, "baseline_direction": null, "confluences": [], "structure_context": null}
+{"event": "SIGNAL_CONSUMED", "timestamp": "2026-10-21T12:30:26.769985+00:00", "signal_key": "M30:1792594800", "timeframe": "M30"}
+{"event": "SCAN", "timestamp": "2026-10-21T12:30:26.770124+00:00", "timeframe": "M30", "direction": null, "baseline_direction": null, "confluences": [], "structure_context": null}
+{"event": "SIGNAL_CONSUMED", "timestamp": "2026-10-21T12:45:27.765879+00:00", "signal_key": "M15:1792596600", "timeframe": "M15"}
+{"event": "SCAN", "timestamp": "2026-10-21T12:45:27.766022+00:00", "timeframe": "M15", "direction": null, "baseline_direction": null, "confluences": [], "structure_context": null}
+{"event": "SIGNAL_CONSUMED", "timestamp": "2026-10-21T13:00:28.819321+00:00", "signal_key": "M15:1792597500", "timeframe": "M15"}
+{"event": "SCAN", "timestamp": "2026-10-21T13:00:28.819601+00:00", "timeframe": "M15", "direction": null, "baseline_direction": null, "confluences": [], "structure_context": null}
+{"event": "SIGNAL_CONSUMED", "timestamp": "2026-10-21T13:00:28.824288+00:00", "signal_key": "M30:1792596600", "timeframe": "M30"}
+{"event": "SCAN", "timestamp": "2026-10-21T13:00:28.824455+00:00", "timeframe": "M30", "direction": null, "baseline_direction": null, "confluences": [], "structure_context": null}
+{"event": "SIGNAL_CONSUMED", "timestamp": "2026-10-21T13:00:28.828402+00:00", "signal_key": "H1:1792594800", "timeframe": "H1"}
+{"event": "SCAN", "timestamp": "2026-10-21T13:00:28.828576+00:00", "timeframe": "H1", "direction": null, "baseline_direction": null, "confluences": [], "structure_context": null}
+{"event": "SIGNAL_CONSUMED", "timestamp": "2026-10-21T13:15:29.813771+00:00", "signal_key": "M15:1792598400", "timeframe": "M15"}
+{"event": "SCAN", "timestamp": "2026-10-21T13:15:29.813901+00:00", "timeframe": "M15", "direction": null, "baseline_direction": null, "confluences": [], "structure_context": null}
+{"event": "SIGNAL_CONSUMED", "timestamp": "2026-10-21T13:42:14.166347+00:00", "signal_key": "M15:1792599300", "timeframe": "M15"}
+{"event": "SCAN", "timestamp": "2026-10-21T13:42:14.166537+00:00", "timeframe": "M15", "direction": null, "baseline_direction": null, "confluences": [], "structure_context": null}
+{"event": "SIGNAL_CONSUMED", "timestamp": "2026-10-21T13:42:14.173077+00:00", "signal_key": "M30:1792598400", "timeframe": "M30"}
+{"event": "SCAN", "timestamp": "2026-10-21T13:42:14.173210+00:00", "timeframe": "M30", "direction": null, "baseline_direction": null, "confluences": [], "structure_context": null}
+{"event": "SIGNAL_CONSUMED", "timestamp": "2026-10-21T13:45:14.376993+00:00", "signal_key": "M15:1792600200", "timeframe": "M15"}
+{"event": "SCAN", "timestamp": "2026-10-21T13:45:14.377126+00:00", "timeframe": "M15", "direction": null, "baseline_direction": null, "confluences": [], "structure_context": null}
+{"event": "SIGNAL_CONSUMED", "timestamp": "2026-10-21T14:00:15.449855+00:00", "signal_key": "M15:1792601100", "timeframe": "M15"}
+{"event": "SCAN", "timestamp": "2026-10-21T14:00:15.449983+00:00", "timeframe": "M15", "direction": null, "baseline_direction": null, "confluences": [], "structure_context": null}
+{"event": "SIGNAL_CONSUMED", "timestamp": "2026-10-21T14:00:15.456359+00:00", "signal_key": "M30:1792600200", "timeframe": "M30"}
+{"event": "SCAN", "timestamp": "2026-10-21T14:00:15.456496+00:00", "timeframe": "M30", "direction": null, "baseline_direction": null, "confluences": [], "structure_context": null}
+{"event": "SIGNAL_CONSUMED", "timestamp": "2026-10-21T14:00:15.460458+00:00", "signal_key": "H1:1792598400", "timeframe": "H1"}
+{"event": "SCAN", "timestamp": "2026-10-21T14:00:15.460577+00:00", "timeframe": "H1", "direction": null, "baseline_direction": null, "confluences": [], "structure_context": null}
+{"event": "SIGNAL_CONSUMED", "timestamp": "2026-10-21T14:50:20.465244+00:00", "signal_key": "M15:1792603800", "timeframe": "M15"}
+{"event": "SCAN", "timestamp": "2026-10-21T14:50:20.465552+00:00", "timeframe": "M15", "direction": null, "baseline_direction": null, "confluences": [], "structure_context": null}
+{"event": "SIGNAL_CONSUMED", "timestamp": "2026-10-21T14:50:20.472759+00:00", "signal_key": "M30:1792602000", "timeframe": "M30"}
+{"event": "SCAN", "timestamp": "2026-10-21T14:50:20.473067+00:00", "timeframe": "M30", "direction": null, "baseline_direction": null, "confluences": [], "structure_context": null}

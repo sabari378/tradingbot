@@ -1,0 +1,445 @@
+{
+  "checked_at": "2026-10-21T10:55:50.708424-04:00",
+  "balance": 9958.92,
+  "equity": 9962.95,
+  "broker_positions": 2,
+  "heartbeat": {
+    "event": "HEARTBEAT",
+    "timestamp": "2026-10-21T14:55:20.761442+00:00",
+    "equity": 9962.93,
+    "positions": 2,
+    "open_risk": 25.16,
+    "orders_halted": false,
+    "entries_risk_halted": false,
+    "exit_policy": "adaptive_v2_guarded"
+  },
+  "strategies": [
+    {
+      "strategy": "sma_crossover",
+      "entries": 1,
+      "open": 0,
+      "closed": 1,
+      "wins": 0,
+      "losses": 1,
+      "unresolved": 0,
+      "realized": -24.69,
+      "floating": 0,
+      "rejected": {
+        "guard_overlapping_trend_direction": 1
+      }
+    },
+    {
+      "strategy": "donchian_breakout",
+      "entries": 3,
+      "open": 1,
+      "closed": 2,
+      "wins": 0,
+      "losses": 2,
+      "unresolved": 0,
+      "realized": -43.86,
+      "floating": -0.91,
+      "rejected": {
+        "guard_overlapping_trend_direction": 1,
+        "guard_existing_strategy_timeframe_position": 1
+      }
+    },
+    {
+      "strategy": "bollinger_reversion",
+      "entries": 2,
+      "open": 0,
+      "closed": 2,
+      "wins": 2,
+      "losses": 0,
+      "unresolved": 0,
+      "realized": 72.8,
+      "floating": 0,
+      "rejected": {
+        "guard_target_below_1R": 2,
+        "minimum_lot_exceeds_risk_budget": 1
+      }
+    },
+    {
+      "strategy": "rsi_countertrend",
+      "entries": 0,
+      "open": 0,
+      "closed": 0,
+      "wins": 0,
+      "losses": 0,
+      "unresolved": 0,
+      "realized": 0,
+      "floating": 0,
+      "rejected": {
+        "guard_target_below_1R": 1,
+        "adaptive_exit_target_not_profitable": 1
+      }
+    },
+    {
+      "strategy": "volatility_breakout",
+      "entries": 0,
+      "open": 0,
+      "closed": 0,
+      "wins": 0,
+      "losses": 0,
+      "unresolved": 0,
+      "realized": 0,
+      "floating": 0,
+      "rejected": {
+        "guard_overlapping_trend_direction": 2
+      }
+    },
+    {
+      "strategy": "engulfing_reversal",
+      "entries": 1,
+      "open": 1,
+      "closed": 0,
+      "wins": 0,
+      "losses": 0,
+      "unresolved": 0,
+      "realized": 0,
+      "floating": 4.94,
+      "rejected": {
+        "guard_target_below_1R": 1
+      }
+    },
+    {
+      "strategy": "market_structure",
+      "entries": 2,
+      "open": 0,
+      "closed": 2,
+      "wins": 0,
+      "losses": 2,
+      "unresolved": 0,
+      "realized": -29.65,
+      "floating": 0,
+      "rejected": {
+        "guard_overlapping_trend_direction": 5,
+        "minimum_lot_exceeds_risk_budget": 2
+      }
+    },
+    {
+      "strategy": "liquidity_sweep",
+      "entries": 1,
+      "open": 0,
+      "closed": 1,
+      "wins": 1,
+      "losses": 0,
+      "unresolved": 0,
+      "realized": 30.08,
+      "floating": 0,
+      "rejected": {
+        "guard_target_below_1R": 3,
+        "minimum_lot_exceeds_risk_budget": 1
+      }
+    },
+    {
+      "strategy": "fair_value_gap",
+      "entries": 0,
+      "open": 0,
+      "closed": 0,
+      "wins": 0,
+      "losses": 0,
+      "unresolved": 0,
+      "realized": 0,
+      "floating": 0,
+      "rejected": {
+        "guard_target_below_1R": 10
+      }
+    },
+    {
+      "strategy": "double_top",
+      "entries": 0,
+      "open": 0,
+      "closed": 0,
+      "wins": 0,
+      "losses": 0,
+      "unresolved": 0,
+      "realized": 0,
+      "floating": 0,
+      "rejected": {
+        "guard_target_below_1R": 1
+      }
+    }
+  ],
+  "trades": [
+    {
+      "event": "FILLED",
+      "timestamp": "2026-10-21T09:30:14.166521+00:00",
+      "timeframe": "M15",
+      "ticket": 1062661160,
+      "direction": "BUY",
+      "entry": 4122.72,
+      "stop_loss": 4114.5,
+      "take_profit": 0.0,
+      "volume": 0.03,
+      "planned_risk": 24.66,
+      "magic": 1302020000,
+      "exit_policy": "adaptive_v2_guarded",
+      "strategy": "sma_crossover",
+      "rule": "Fresh 20/50 SMA crossover",
+      "structure_context": null,
+      "signal_key": "M15:1792584900",
+      "confluences": [
+        "sma_crossover"
+      ],
+      "realized": -24.69,
+      "status": "CLOSED",
+      "floating": 0,
+      "exit": 4114.49,
+      "exit_reason": "SL"
+    },
+    {
+      "event": "FILLED",
+      "timestamp": "2026-10-21T05:30:28.513015+00:00",
+      "timeframe": "M15",
+      "ticket": 1062475603,
+      "direction": "BUY",
+      "entry": 4129.34,
+      "stop_loss": 4118.12,
+      "take_profit": 0.0,
+      "volume": 0.02,
+      "planned_risk": 22.44,
+      "magic": 1302020010,
+      "exit_policy": "adaptive_v2_guarded",
+      "strategy": "donchian_breakout",
+      "rule": "Close beyond the previous 20-candle range",
+      "structure_context": null,
+      "signal_key": "M15:1792570500",
+      "confluences": [
+        "donchian_breakout"
+      ],
+      "realized": -22.52,
+      "status": "CLOSED",
+      "floating": 0,
+      "exit": 4118.08,
+      "exit_reason": "SL"
+    },
+    {
+      "event": "FILLED",
+      "timestamp": "2026-10-21T07:00:04.508431+00:00",
+      "timeframe": "M15",
+      "ticket": 1062551197,
+      "direction": "SELL",
+      "entry": 4112.19,
+      "stop_loss": 4122.86,
+      "take_profit": 0.0,
+      "volume": 0.02,
+      "planned_risk": 21.34,
+      "magic": 1302020010,
+      "exit_policy": "adaptive_v2_guarded",
+      "strategy": "donchian_breakout",
+      "rule": "Close beyond the previous 20-candle range",
+      "structure_context": null,
+      "signal_key": "M15:1792575900",
+      "confluences": [
+        "donchian_breakout"
+      ],
+      "realized": -21.34,
+      "status": "CLOSED",
+      "floating": 0,
+      "exit": 4122.86,
+      "exit_reason": "SL"
+    },
+    {
+      "event": "FILLED",
+      "timestamp": "2026-10-21T11:30:22.436678+00:00",
+      "timeframe": "M30",
+      "ticket": 1062768149,
+      "direction": "BUY",
+      "entry": 4131.04,
+      "stop_loss": 4116.85,
+      "take_profit": 0.0,
+      "volume": 0.01,
+      "planned_risk": 14.19,
+      "magic": 1302020011,
+      "exit_policy": "adaptive_v2_guarded",
+      "strategy": "donchian_breakout",
+      "rule": "Close beyond the previous 20-candle range",
+      "structure_context": null,
+      "signal_key": "M30:1792591200",
+      "confluences": [
+        "donchian_breakout"
+      ],
+      "realized": 0.0,
+      "status": "OPEN",
+      "floating": -0.91,
+      "current": 4130.13,
+      "sl": 4116.85,
+      "tp": 0.0
+    },
+    {
+      "event": "FILLED",
+      "timestamp": "2026-10-21T05:30:28.617739+00:00",
+      "timeframe": "M15",
+      "ticket": 1062475615,
+      "direction": "SELL",
+      "entry": 4129.12,
+      "stop_loss": 4137.74,
+      "take_profit": 4118.12,
+      "volume": 0.02,
+      "planned_risk": 17.32,
+      "magic": 1302020020,
+      "exit_policy": "adaptive_v2_guarded",
+      "strategy": "bollinger_reversion",
+      "rule": "Fresh close outside the 2-standard-deviation band; countertrend entry",
+      "structure_context": null,
+      "signal_key": "M15:1792570500",
+      "confluences": [
+        "bollinger_reversion"
+      ],
+      "realized": 22.16,
+      "status": "CLOSED",
+      "floating": 0,
+      "exit": 4118.04,
+      "exit_reason": "TP"
+    },
+    {
+      "event": "FILLED",
+      "timestamp": "2026-10-21T11:45:23.580308+00:00",
+      "timeframe": "M15",
+      "ticket": 1062794435,
+      "direction": "SELL",
+      "entry": 4139.47,
+      "stop_loss": 4147.15,
+      "take_profit": 4122.82,
+      "volume": 0.03,
+      "planned_risk": 23.04,
+      "magic": 1302020020,
+      "exit_policy": "adaptive_v2_guarded",
+      "strategy": "bollinger_reversion",
+      "rule": "Fresh close outside the 2-standard-deviation band; countertrend entry",
+      "structure_context": null,
+      "signal_key": "M15:1792593000",
+      "confluences": [
+        "bollinger_reversion",
+        "volume_confirmation"
+      ],
+      "realized": 50.64,
+      "status": "CLOSED",
+      "floating": 0,
+      "exit": 4122.59,
+      "exit_reason": "TP"
+    },
+    {
+      "event": "FILLED",
+      "timestamp": "2026-10-21T12:15:25.745601+00:00",
+      "timeframe": "M15",
+      "ticket": 1062824942,
+      "direction": "SELL",
+      "entry": 4135.29,
+      "stop_loss": 4146.26,
+      "take_profit": 4118.65,
+      "volume": 0.01,
+      "planned_risk": 11.06,
+      "magic": 1302020050,
+      "exit_policy": "adaptive_v2_guarded",
+      "strategy": "engulfing_reversal",
+      "rule": "Current body engulfs the previous opposite-direction body",
+      "structure_context": null,
+      "signal_key": "M15:1792594800",
+      "confluences": [
+        "engulfing_reversal",
+        "volume_confirmation",
+        "engulfing_at_20_bar_extreme"
+      ],
+      "realized": 0.0,
+      "status": "OPEN",
+      "floating": 4.94,
+      "current": 4130.35,
+      "sl": 4146.26,
+      "tp": 4118.65
+    },
+    {
+      "event": "FILLED",
+      "timestamp": "2026-10-21T02:31:46.804467+00:00",
+      "timeframe": "M30",
+      "ticket": 1062372528,
+      "direction": "SELL",
+      "entry": 4116.25,
+      "stop_loss": 4126.84,
+      "take_profit": 0.0,
+      "volume": 0.02,
+      "planned_risk": 21.18,
+      "magic": 1302020061,
+      "exit_policy": "adaptive_v2_guarded",
+      "strategy": "market_structure",
+      "rule": "Fresh crossing of the confirmed swing level",
+      "structure_context": {
+        "direction": "bearish",
+        "swing_high": 4131.52,
+        "swing_low": 4118.52,
+        "previous_close": 4118.83,
+        "current_close": 4116.45,
+        "reason": "fresh_break"
+      },
+      "signal_key": "M30:1792558800",
+      "confluences": [
+        "market_structure"
+      ],
+      "realized": -21.4,
+      "status": "CLOSED",
+      "floating": 0,
+      "exit": 4126.95,
+      "exit_reason": "SL"
+    },
+    {
+      "event": "FILLED",
+      "timestamp": "2026-10-21T10:15:17.243031+00:00",
+      "timeframe": "M15",
+      "ticket": 1062695436,
+      "direction": "SELL",
+      "entry": 4114.73,
+      "stop_loss": 4122.98,
+      "take_profit": 0.0,
+      "volume": 0.01,
+      "planned_risk": 8.24,
+      "magic": 1302020060,
+      "exit_policy": "adaptive_v2_guarded",
+      "strategy": "market_structure",
+      "rule": "Fresh crossing of the confirmed swing level",
+      "structure_context": {
+        "direction": "bearish",
+        "swing_high": 4124.95,
+        "swing_low": 4118.16,
+        "previous_close": 4118.36,
+        "current_close": 4114.88,
+        "reason": "fresh_break"
+      },
+      "signal_key": "M15:1792587600",
+      "confluences": [
+        "market_structure"
+      ],
+      "realized": -8.25,
+      "status": "CLOSED",
+      "floating": 0,
+      "exit": 4122.98,
+      "exit_reason": "SL"
+    },
+    {
+      "event": "FILLED",
+      "timestamp": "2026-10-21T02:31:46.931026+00:00",
+      "timeframe": "H1",
+      "ticket": 1062372530,
+      "direction": "BUY",
+      "entry": 4116.51,
+      "stop_loss": 4105.01,
+      "take_profit": 4131.52,
+      "volume": 0.02,
+      "planned_risk": 23.0,
+      "magic": 1302020072,
+      "exit_policy": "adaptive_v2_guarded",
+      "strategy": "liquidity_sweep",
+      "rule": "Sweep of the previous 20-candle extreme followed by a close back inside",
+      "structure_context": null,
+      "signal_key": "H1:1792555200",
+      "confluences": [
+        "sell_side_sweep",
+        "directional_close_outer_third"
+      ],
+      "realized": 30.08,
+      "status": "CLOSED",
+      "floating": 0,
+      "exit": 4131.55,
+      "exit_reason": "TP"
+    }
+  ]
+}
