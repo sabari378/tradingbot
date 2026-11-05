@@ -26,9 +26,3 @@ docker-down:
 
 migrate:
 	alembic -c backend/alembic.ini upgrade head
-
-helm-lint:
-	helm lint infra/helm/nirv
-
-helm-render:
-	helm template nirv infra/helm/nirv

@@ -1,9 +1,9 @@
 "use client";
 
+import Link from "next/link";
 import Image from "next/image";
-import { Activity, AlertOctagon, Bot, CircleStop, Crosshair, KeyRound, Mic, Play, Radio, Send, Sparkles, Wifi } from "lucide-react";
+import { Activity, AlertOctagon, Bot, CircleStop, Crosshair, History, KeyRound, Mic, Play, Radio, Send, Sparkles, Wifi } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
-import { PageDropdown } from "./page-dropdown";
 
 type Agent = { name: string; display_name: string; status: string; activity: string; color: string };
 type ControlState = { active: boolean; reason: string | null };
@@ -17,8 +17,7 @@ const voiceProfiles: Record<string, { index: number; pitch: number; rate: number
   news: { index: 4, pitch: 1.2, rate: 0.88 },
   signal: { index: 5, pitch: 1, rate: 1.05 },
   risk: { index: 6, pitch: 0.75, rate: 0.9 },
-  backtest: { index: 7, pitch: 0.9, rate: 0.92 },
-  execution: { index: 8, pitch: 0.95, rate: 1.08 },
+  execution: { index: 7, pitch: 0.95, rate: 1.08 },
 };
 
 const apiUrl = process.env.NEXT_PUBLIC_API_URL ?? (process.env.NODE_ENV === "development" ? "http://127.0.0.1:8000" : "");
@@ -29,7 +28,6 @@ const fallbackAgents: Agent[] = [
   { name: "news", display_name: "Beacon", status: "STANDBY", activity: "Guards trades around market news", color: "red" },
   { name: "signal", display_name: "Atlas", status: "ONLINE", activity: "Combines evidence into a setup", color: "blue" },
   { name: "risk", display_name: "Sentinel", status: "ONLINE", activity: "Enforces risk and exposure limits", color: "green" },
-  { name: "backtest", display_name: "Chronos", status: "ONLINE", activity: "Replays XM history without future data", color: "teal" },
   { name: "execution", display_name: "Forge", status: "STANDBY", activity: "Sends approved demo orders", color: "orange" },
 ];
 
@@ -137,12 +135,12 @@ export default function Dashboard() {
       <div className="room-wash" aria-hidden="true" />
       <nav className="room-nav">
         <div className="brand"><span className="brand-mark"><Bot size={21} /></span><strong>NIRV</strong><span className="eyebrow">COMMAND DECK / 01</span></div>
-        <div className="nav-actions"><PageDropdown /><span className="link-state"><Wifi size={14} /> {streamLive ? "LIVE LINK" : "LOCAL LINK"}</span><span className="mode-pill">DEMO MODE</span></div>
+        <div className="nav-actions"><Link href="/history"><History size={15} /> HISTORY</Link><span className="link-state"><Wifi size={14} /> {streamLive ? "LIVE LINK" : "LOCAL LINK"}</span><span className="mode-pill">DEMO MODE</span></div>
       </nav>
       <header className="room-heading"><p className="eyebrow">OPERATOR INTERFACE / LIVE INTELLIGENCE</p><h1>Nirv <span>Intelligence</span></h1><p className="heading-note">One decision center. Every market signal in orbit.</p></header>
       <section className="bot-stage" aria-label="Nirv bot intelligence map">
         <div className="orbit orbit-one" /><div className="orbit orbit-two" />
-        {agents.map((agent, index) => <AgentNode key={agent.name} agent={agent} index={index} count={agents.length} speaking={speakingTarget === agent.name} onActivate={() => askBot(agent.name)} />)}
+        {agents.map((agent, index) => <AgentNode key={agent.name} agent={agent} index={index} speaking={speakingTarget === agent.name} onActivate={() => askBot(agent.name)} />)}
         <button className={`nirv-core ${speakingTarget === "nirv" ? "is-speaking" : ""}`} onClick={() => askBot("nirv")} aria-label={speakingTarget === "nirv" ? "Stop Nirv speaking" : "Ask Nirv what it can do"}><span className="core-pulse" /><span className="nirv-avatar"><Image src="/images/nirv-bot-avatar.jpg" alt="Nirv bot" fill sizes="150px" priority /></span><span className="nirv-core-label"><strong>NIRV</strong><span className="core-status"><i /> {emergencyStop.active ? "STOPPED" : speakingTarget === "nirv" ? "SPEAKING" : "ONLINE"}</span></span></button>
         <button className={`nirv-mic ${listening && voiceTarget === "nirv" ? "is-listening" : ""}`} onClick={() => listen("nirv")} aria-label="Speak to Nirv"><Mic size={17} /><span>{listening && voiceTarget === "nirv" ? "LISTENING" : "TALK TO NIRV"}</span></button>
       </section>
@@ -157,8 +155,8 @@ export default function Dashboard() {
   );
 }
 
-function AgentNode({ agent, index, count, speaking, onActivate }: { agent: Agent; index: number; count: number; speaking: boolean; onActivate: () => void }) {
-  const angle = (index / count) * Math.PI * 2 - Math.PI / 2;
+function AgentNode({ agent, index, speaking, onActivate }: { agent: Agent; index: number; speaking: boolean; onActivate: () => void }) {
+  const angle = (index / 7) * Math.PI * 2 - Math.PI / 2;
   const position = {
     left: `${50 + Math.cos(angle) * 39}%`,
     top: `${50 + Math.sin(angle) * 42}%`,

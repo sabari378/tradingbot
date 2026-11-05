@@ -2,7 +2,6 @@ import subprocess
 import sys
 from pathlib import Path
 
-from nirv.core.config import get_settings
 from nirv.services.paper_status import DATA_DIR
 
 PROJECT_DIR = Path(__file__).resolve().parents[3]
@@ -26,7 +25,7 @@ async def start_gold_demo_session() -> dict[str, str | bool]:
             "--timeframe",
             "M5",
             "--duration",
-            str(get_settings().demo_session_duration_seconds),
+            "7200",
             "--interval",
             "60",
             "--volume",
@@ -35,7 +34,6 @@ async def start_gold_demo_session() -> dict[str, str | bool]:
             str(output),
         ],
         cwd=PROJECT_DIR,
-        start_new_session=True,
+        creationflags=getattr(subprocess, "CREATE_NEW_PROCESS_GROUP", 0),
     )
-    hours = get_settings().demo_session_duration_seconds / 3600
-    return {"started": True, "message": f"Started {hours:g}-hour DEMO trading for GOLD.i# on M5 at 0.05 volume."}
+    return {"started": True, "message": "Started two-hour DEMO trading for GOLD.i# on M5 at 0.05 volume."}

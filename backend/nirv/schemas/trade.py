@@ -53,4 +53,3 @@ class TradeCandidate(BaseModel):
     executed_at: datetime | None = None
     broker_ticket: str | None = None
     pnl: float | None = None
-    magic: int = 1302015909

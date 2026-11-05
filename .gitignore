@@ -7,8 +7,6 @@ __pycache__/
 .next/
 node_modules/
 *.db
-terraform/.terraform/
-terraform.tfstate*
 .run/
 debug.log
 *.tsbuildinfo
