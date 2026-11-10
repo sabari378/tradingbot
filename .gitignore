@@ -10,3 +10,6 @@ node_modules/
 .run/
 debug.log
 *.tsbuildinfo
+
+# Local forward-test journals, broker account state, and monitor snapshots.
+backend/data/pluto4-guarded-*/
